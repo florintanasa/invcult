@@ -1,4 +1,4 @@
-# Biogen
+# Inventariere culturi
 ## Instalare
 ***
 Pentru a lucra la acest proiect va trebui, ca initial, să avem instalat:
