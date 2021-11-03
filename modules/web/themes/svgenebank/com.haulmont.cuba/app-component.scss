@@ -1,0 +1,5 @@
+@import "../svgenebank";
+
+@mixin com_haulmont_cuba {
+  @include svgenebank;
+}

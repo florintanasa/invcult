@@ -1,0 +1,6 @@
+@import "svgenebank-defaults";
+@import "svgenebank";
+
+.svgenebank {
+  @include svgenebank;
+}
