@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://countysirutaEdit.caption"
+        focusComponent="form"
+        messagesPack="com.svgenebank.invcult.web.screens.countysiruta">
+    <data>
+        <instance id="countysirutaDc"
+                  class="com.svgenebank.invcult.entity.Countysiruta"
+                  view="countysiruta-all-view">
+            <loader/>
+        </instance>
+        <collection id="id_zonesirutasDc" class="com.svgenebank.invcult.entity.Zonesiruta" view="_minimal">
+            <loader id="id_zonesirutasDl">
+                <query>
+                    <![CDATA[select e from invcult_Zonesiruta e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="countysirutaDc">
+            <column width="350px">
+                <textField id="sirutaField" property="siruta"/>
+                <textField id="codeField" property="code"/>
+                <textField id="nameField" property="name"/>
+                <textField id="mnemonicField" property="mnemonic"/>
+                <lookupPickerField id="id_zonesirutaField" optionsContainer="id_zonesirutasDc" property="id_zonesiruta">
+                    <actions>
+                        <action id="lookup" type="picker_lookup"/>
+                        <action id="open" type="picker_open"/>
+                        <action id="clear" type="picker_clear"/>
+                    </actions>
+                </lookupPickerField>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
+            <button id="closeBtn" action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

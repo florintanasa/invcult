@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
+        caption="msg://countysirutaBrowse.caption"
+        focusComponent="countysirutasTable"
+        messagesPack="com.svgenebank.invcult.web.screens.countysiruta">
+    <data readOnly="true">
+        <collection id="countysirutasDc"
+                    class="com.svgenebank.invcult.entity.Countysiruta"
+                    view="countysiruta-all-view">
+            <loader id="countysirutasDl">
+                <query>
+                    <![CDATA[select e from invcult_Countysiruta e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="countysirutasTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="countysirutasTable"
+                dataLoader="countysirutasDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="countysirutasTable"
+                    width="100%"
+                    dataContainer="countysirutasDc"
+                    multiselect="true">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+                <action id="refresh" type="refresh"/>
+                <action id="excel" type="excel"/>
+            </actions>
+            <columns>
+                <column id="siruta"/>
+                <column id="code"/>
+                <column id="name"/>
+                <column id="mnemonic"/>
+                <column id="id_zonesiruta"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="countysirutasTable.create"/>
+                <button id="editBtn" action="countysirutasTable.edit"/>
+                <button id="removeBtn" action="countysirutasTable.remove"/>
+                <button id="refreshBtn" action="countysirutasTable.refresh"/>
+                <button id="excelBtn" action="countysirutasTable.excel"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

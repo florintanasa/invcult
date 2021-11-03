@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
 
+    <view entity="invcult_Zonesiruta" name="zonesiruta-all-view" extends="_local"/>
+    <view entity="invcult_Zonesiruta" name="zonesiruta-minimal-view" extends="_minimal">
+        <property name="zonename"/>
+    </view>
+    <view entity="invcult_Countysiruta" name="countysiruta-all-view" extends="_local">
+        <property name="id_zonesiruta" view="_minimal">
+            <property name="zonename"/>
+        </property>
+    </view>
+    <view entity="invcult_Countysiruta" name="countysiruta-minimal-view" extends="_minimal"/>
+    <view entity="invcult_Localitysiruta" name="localitysiruta-all-view" extends="_local">
+        <property name="id_countysiruta" view="_minimal"/>
+    </view>
+    <view entity="invcult_Localitysiruta" name="localitysiruta-minimal-view" extends="_minimal"/>
 </views>

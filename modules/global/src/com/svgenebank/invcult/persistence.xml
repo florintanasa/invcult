@@ -2,5 +2,8 @@
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
     <persistence-unit name="invcult" transaction-type="RESOURCE_LOCAL">
 
+        <class>com.svgenebank.invcult.entity.Zonesiruta</class>
+        <class>com.svgenebank.invcult.entity.Localitysiruta</class>
+        <class>com.svgenebank.invcult.entity.Countysiruta</class>
     </persistence-unit>
 </persistence>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
+        caption="msg://localitysirutaBrowse.caption"
+        focusComponent="localitysirutasTable"
+        messagesPack="com.svgenebank.invcult.web.screens.localitysiruta">
+    <data readOnly="true">
+        <collection id="localitysirutasDc"
+                    class="com.svgenebank.invcult.entity.Localitysiruta"
+                    view="localitysiruta-all-view">
+            <loader id="localitysirutasDl">
+                <query>
+                    <![CDATA[select e from invcult_Localitysiruta e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="localitysirutasTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="localitysirutasTable"
+                dataLoader="localitysirutasDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="localitysirutasTable"
+                    width="100%"
+                    dataContainer="localitysirutasDc"
+                    multiselect="true">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+                <action id="refresh" type="refresh"/>
+                <action id="excel" type="excel"/>
+            </actions>
+            <columns>
+                <column id="siruta"/>
+                <column id="name"/>
+                <column id="postcode"/>
+                <column id="sirutasup"/>
+                <column id="id_countysiruta"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="localitysirutasTable.create"/>
+                <button id="editBtn" action="localitysirutasTable.edit"/>
+                <button id="removeBtn" action="localitysirutasTable.remove"/>
+                <button id="refreshBtn" action="localitysirutasTable.refresh"/>
+                <button id="excelBtn" action="localitysirutasTable.excel"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

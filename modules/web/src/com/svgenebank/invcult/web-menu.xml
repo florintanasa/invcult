@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
     <menu id="application-invcult" insertBefore="administration" caption="mainMsg://menu_config.application-invcult">
+        <item screen="invcult_Zonesiruta.browse" caption="mainMsg://menu_config.invcult_Zonesiruta.browse"/>
+        <item screen="invcult_Countysiruta.browse" caption="mainMsg://menu_config.invcult_Countysiruta.browse"/>
+        <item screen="invcult_Localitysiruta.browse" caption="mainMsg://menu_config.invcult_Localitysiruta.browse"/>
     </menu>
 </menu-config>

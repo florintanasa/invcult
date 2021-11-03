@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
+        caption="msg://zonesirutaBrowse.caption"
+        focusComponent="zonesirutasTable"
+        messagesPack="com.svgenebank.invcult.web.screens.zonesiruta">
+    <data readOnly="true">
+        <collection id="zonesirutasDc"
+                    class="com.svgenebank.invcult.entity.Zonesiruta"
+                    view="zonesiruta-all-view">
+            <loader id="zonesirutasDl">
+                <query>
+                    <![CDATA[select e from invcult_Zonesiruta e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="zonesirutasTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="zonesirutasTable"
+                dataLoader="zonesirutasDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="zonesirutasTable"
+                    width="100%"
+                    dataContainer="zonesirutasDc"
+                    multiselect="true">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+                <action id="refresh" type="refresh"/>
+                <action id="excel" type="excel"/>
+            </actions>
+            <columns>
+                <column id="siruta"/>
+                <column id="zonename"/>
+                <column id="zonenumber"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="zonesirutasTable.create"/>
+                <button id="editBtn" action="zonesirutasTable.edit"/>
+                <button id="removeBtn" action="zonesirutasTable.remove"/>
+                <button id="refreshBtn" action="zonesirutasTable.refresh"/>
+                <button id="excelBtn" action="zonesirutasTable.excel"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>
