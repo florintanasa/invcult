@@ -1,0 +1,1 @@
+create unique index IDX_INVCULT_ROADTYPE_UK_TIP_ARTERA on INVCULT_ROADTYPE (TIP_ARTERA) where DELETE_TS is null ;

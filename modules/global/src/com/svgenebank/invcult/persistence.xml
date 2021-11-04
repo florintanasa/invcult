@@ -7,5 +7,7 @@
         <class>com.svgenebank.invcult.entity.Countysiruta</class>
         <class>com.svgenebank.invcult.entity.Tippersoana</class>
         <class>com.svgenebank.invcult.entity.Farmers</class>
+        <class>com.svgenebank.invcult.entity.Roadtype</class>
+        <class>com.svgenebank.invcult.entity.Street</class>
     </persistence-unit>
 </persistence>

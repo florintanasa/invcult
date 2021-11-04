@@ -8,5 +8,7 @@
         <item screen="invcult_Countysiruta.browse" caption="mainMsg://menu_config.invcult_Countysiruta.browse"/>
         <item screen="invcult_Zonesiruta.browse" caption="mainMsg://menu_config.invcult_Zonesiruta.browse"/>
         <item screen="invcult_Tippersoana.browse" caption="mainMsg://menu_config.invcult_Tippersoana.browse"/>
+        <item screen="invcult_Roadtype.browse" caption="mainMsg://menu_config.invcult_Roadtype.browse"/>
+        <item screen="invcult_Street.browse" caption="mainMsg://menu_config.invcult_Street.browse"/>
     </menu>
 </menu-config>

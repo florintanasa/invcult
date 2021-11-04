@@ -21,4 +21,8 @@
         <property name="idTippersoana" view="_minimal"/>
     </view>
     <view entity="invcult_Farmers" name="farmers-minimal-view" extends="_minimal"/>
+    <view entity="invcult_Roadtype" name="roadtype-all-view" extends="_local"/>
+    <view entity="invcult_Roadtype" name="roadtype-minimal-view" extends="_minimal"/>
+    <view entity="invcult_Street" name="street-all-view" extends="_local"/>
+    <view entity="invcult_Street" name="street-minimal-view" extends="_minimal"/>
 </views>
