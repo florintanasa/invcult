@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://farmersEdit.caption"
+        focusComponent="form"
+        messagesPack="com.svgenebank.invcult.web.screens.farmers">
+    <data>
+        <instance id="farmersDc"
+                  class="com.svgenebank.invcult.entity.Farmers"
+                  view="farmers-all-view">
+            <loader/>
+        </instance>
+        <collection id="idTippersoanasDc" class="com.svgenebank.invcult.entity.Tippersoana" view="_minimal">
+            <loader id="idTippersoanasDl">
+                <query>
+                    <![CDATA[select e from invcult_Tippersoana e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="farmersDc">
+            <column width="350px">
+                <lookupPickerField id="idTippersoanaField" optionsContainer="idTippersoanasDc" property="idTippersoana">
+                    <actions>
+                        <action id="lookup" type="picker_lookup"/>
+                        <action id="open" type="picker_open"/>
+                        <action id="clear" type="picker_clear"/>
+                    </actions>
+                </lookupPickerField>
+                <textField id="denumireField" property="denumire"/>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
+            <button id="closeBtn" action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

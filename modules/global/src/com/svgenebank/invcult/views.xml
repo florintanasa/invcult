@@ -15,4 +15,10 @@
         <property name="id_countysiruta" view="_minimal"/>
     </view>
     <view entity="invcult_Localitysiruta" name="localitysiruta-minimal-view" extends="_minimal"/>
+    <view entity="invcult_Tippersoana" name="tippersoana-all-view" extends="_local"/>
+    <view entity="invcult_Tippersoana" name="tippersoana-minimal-view" extends="_minimal"/>
+    <view entity="invcult_Farmers" name="farmers-all-view" extends="_local">
+        <property name="idTippersoana" view="_minimal"/>
+    </view>
+    <view entity="invcult_Farmers" name="farmers-minimal-view" extends="_minimal"/>
 </views>

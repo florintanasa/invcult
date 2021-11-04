@@ -5,5 +5,7 @@
         <class>com.svgenebank.invcult.entity.Zonesiruta</class>
         <class>com.svgenebank.invcult.entity.Localitysiruta</class>
         <class>com.svgenebank.invcult.entity.Countysiruta</class>
+        <class>com.svgenebank.invcult.entity.Tippersoana</class>
+        <class>com.svgenebank.invcult.entity.Farmers</class>
     </persistence-unit>
 </persistence>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
+        caption="msg://farmersBrowse.caption"
+        focusComponent="farmersesTable"
+        messagesPack="com.svgenebank.invcult.web.screens.farmers">
+    <data readOnly="true">
+        <collection id="farmersesDc"
+                    class="com.svgenebank.invcult.entity.Farmers"
+                    view="farmers-all-view">
+            <loader id="farmersesDl">
+                <query>
+                    <![CDATA[select e from invcult_Farmers e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="farmersesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="farmersesTable"
+                dataLoader="farmersesDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="farmersesTable"
+                    width="100%"
+                    dataContainer="farmersesDc"
+                    multiselect="true">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+                <action id="refresh" type="refresh"/>
+                <action id="excel" type="excel"/>
+            </actions>
+            <columns>
+                <column id="idTippersoana"/>
+                <column id="denumire"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="farmersesTable.create"/>
+                <button id="editBtn" action="farmersesTable.edit"/>
+                <button id="removeBtn" action="farmersesTable.remove"/>
+                <button id="refreshBtn" action="farmersesTable.refresh"/>
+                <button id="excelBtn" action="farmersesTable.excel"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>
