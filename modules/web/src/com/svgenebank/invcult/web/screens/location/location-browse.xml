@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
+        caption="msg://locationBrowse.caption"
+        focusComponent="locationsTable"
+        messagesPack="com.svgenebank.invcult.web.screens.location">
+    <data readOnly="true">
+        <collection id="locationsDc"
+                    class="com.svgenebank.invcult.entity.Location"
+                    view="location-all-view">
+            <loader id="locationsDl">
+                <query>
+                    <![CDATA[select e from invcult_Location e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="locationsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="locationsTable"
+                dataLoader="locationsDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="locationsTable"
+                    width="100%"
+                    dataContainer="locationsDc"
+                    multiselect="true">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+                <action id="refresh" type="refresh"/>
+                <action id="excel" type="excel"/>
+            </actions>
+            <columns>
+                <column id="idFarmers"/>
+                <column id="idLocalirysiruta.id_countysiruta.id_zonesiruta.zonename"/>
+                <column id="idLocalirysiruta.id_countysiruta.name"/>
+                <column id="idLocalirysiruta"/>
+                <column id="idRoadtype"/>
+                <column id="idStreet"/>
+                <column id="numar"/>
+                <column id="bloc"/>
+                <column id="scara"/>
+                <column id="etaj"/>
+                <column id="apartament"/>
+                <column id="codpostal"/>
+                <column id="corespondenta"/>
+                <column id="domiciliu"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="locationsTable.create"/>
+                <button id="editBtn" action="locationsTable.edit"/>
+                <button id="removeBtn" action="locationsTable.remove"/>
+                <button id="refreshBtn" action="locationsTable.refresh"/>
+                <button id="excelBtn" action="locationsTable.excel"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

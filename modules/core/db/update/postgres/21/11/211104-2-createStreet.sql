@@ -1,0 +1,1 @@
+create unique index IDX_INVCULT_STREET_UK_NUME_STRADA on INVCULT_STREET (NUME_STRADA) where DELETE_TS is null ;

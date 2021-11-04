@@ -2,13 +2,14 @@
 <menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
     <menu id="application-invcult" insertBefore="administration" caption="mainMsg://menu_config.application-invcult">
         <item screen="invcult_Farmers.browse" caption="mainMsg://menu_config.invcult_Farmers.browse"/>
+        <item screen="invcult_Location.browse" caption="mainMsg://menu_config.invcult_Location.browse"/>
     </menu>
     <menu id="setting-invcult" caption="mainMsg://menu_config.setting-invcult" insertBefore="administration">
-        <item screen="invcult_Localitysiruta.browse" caption="mainMsg://menu_config.invcult_Localitysiruta.browse"/>
-        <item screen="invcult_Countysiruta.browse" caption="mainMsg://menu_config.invcult_Countysiruta.browse"/>
         <item screen="invcult_Zonesiruta.browse" caption="mainMsg://menu_config.invcult_Zonesiruta.browse"/>
-        <item screen="invcult_Tippersoana.browse" caption="mainMsg://menu_config.invcult_Tippersoana.browse"/>
+        <item screen="invcult_Countysiruta.browse" caption="mainMsg://menu_config.invcult_Countysiruta.browse"/>
+        <item screen="invcult_Localitysiruta.browse" caption="mainMsg://menu_config.invcult_Localitysiruta.browse"/>
         <item screen="invcult_Roadtype.browse" caption="mainMsg://menu_config.invcult_Roadtype.browse"/>
         <item screen="invcult_Street.browse" caption="mainMsg://menu_config.invcult_Street.browse"/>
+        <item screen="invcult_Tippersoana.browse" caption="mainMsg://menu_config.invcult_Tippersoana.browse"/>
     </menu>
 </menu-config>

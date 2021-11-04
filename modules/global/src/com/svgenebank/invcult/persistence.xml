@@ -9,5 +9,6 @@
         <class>com.svgenebank.invcult.entity.Farmers</class>
         <class>com.svgenebank.invcult.entity.Roadtype</class>
         <class>com.svgenebank.invcult.entity.Street</class>
+        <class>com.svgenebank.invcult.entity.Location</class>
     </persistence-unit>
 </persistence>

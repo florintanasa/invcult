@@ -25,4 +25,20 @@
     <view entity="invcult_Roadtype" name="roadtype-minimal-view" extends="_minimal"/>
     <view entity="invcult_Street" name="street-all-view" extends="_local"/>
     <view entity="invcult_Street" name="street-minimal-view" extends="_minimal"/>
+    <view entity="invcult_Location" name="location-all-view" extends="_local">
+        <property name="idFarmers" view="_minimal"/>
+        <property name="idLocalirysiruta" view="_minimal">
+            <property name="id_countysiruta" view="_minimal">
+                <property name="id_zonesiruta" view="_minimal"/>
+            </property>
+        </property>
+        <property name="idRoadtype" view="_minimal"/>
+        <property name="idStreet" view="_minimal"/>
+    </view>
+    <view entity="invcult_Location" name="location-minimal-view" extends="_local">
+        <property name="idFarmers" view="_minimal"/>
+        <property name="idLocalirysiruta" view="_minimal"/>
+        <property name="idRoadtype" view="_minimal"/>
+        <property name="idStreet" view="_minimal"/>
+    </view>
 </views>
