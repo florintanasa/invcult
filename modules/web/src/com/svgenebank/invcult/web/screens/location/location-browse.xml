@@ -50,6 +50,7 @@
                 <column id="codpostal"/>
                 <column id="corespondenta"/>
                 <column id="domiciliu"/>
+                <column id="ferma"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"

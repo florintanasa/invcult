@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 
 @Table(name = "INVCULT_LOCATION")
 @Entity(name = "invcult_Location")
-@NamePattern("%s %s|idStreet,numar")
+@NamePattern("%s %s %s|idFarmers,idStreet,numar")
 public class Location extends StandardEntity {
     private static final long serialVersionUID = 4764595626878304243L;
 
@@ -61,6 +61,18 @@ public class Location extends StandardEntity {
     @NotNull
     @Column(name = "DOMICILIU", nullable = false)
     private Boolean domiciliu = false;
+
+    @NotNull
+    @Column(name = "FERMA", nullable = false)
+    private Boolean ferma = false;
+
+    public Boolean getFerma() {
+        return ferma;
+    }
+
+    public void setFerma(Boolean ferma) {
+        this.ferma = ferma;
+    }
 
     public Boolean getDomiciliu() {
         return domiciliu;

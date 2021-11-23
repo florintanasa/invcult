@@ -146,6 +146,7 @@ create table INVCULT_LOCATION (
     CODPOSTAL varchar(6),
     CORESPONDENTA boolean not null,
     DOMICILIU boolean not null,
+    FERMA boolean not null,
     --
     primary key (ID)
 )^

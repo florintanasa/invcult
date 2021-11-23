@@ -81,6 +81,7 @@
                     <textField id="codpostalField" property="codpostal"/>
                     <checkBox id="corespondentaField" property="corespondenta"/>
                     <checkBox id="domiciliuField" property="domiciliu"/>
+                    <checkBox id="fermaField" property="ferma"/>
                 </column>
             </form>
         </scrollBox>
