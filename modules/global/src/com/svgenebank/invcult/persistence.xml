@@ -10,5 +10,8 @@
         <class>com.svgenebank.invcult.entity.Roadtype</class>
         <class>com.svgenebank.invcult.entity.Street</class>
         <class>com.svgenebank.invcult.entity.Location</class>
+        <class>com.svgenebank.invcult.entity.Crops</class>
+        <class>com.svgenebank.invcult.entity.Inventory</class>
+        <class>com.svgenebank.invcult.entity.Persons</class>
     </persistence-unit>
 </persistence>
