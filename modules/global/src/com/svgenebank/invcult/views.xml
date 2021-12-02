@@ -37,4 +37,8 @@
         <property name="idRoadtype" view="_minimal"/>
         <property name="idStreet" view="_minimal"/>
     </view>
+    <view entity="invcult_Crops" name="crops-all-view" extends="_local"/>
+    <view entity="invcult_Crops" name="crops-minimal-view" extends="_minimal"/>
+    <view entity="invcult_Persons" name="persons-all-view" extends="_local"/>
+    <view entity="invcult_Persons" name="persons-minimal-view" extends="_minimal"/>
 </views>
