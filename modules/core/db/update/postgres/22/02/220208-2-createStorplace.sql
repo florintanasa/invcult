@@ -1,0 +1,1 @@
+create unique index IDX_INVCULT_STORPLACE_UK_NAME on INVCULT_STORPLACE (NAME) where DELETE_TS is null ;

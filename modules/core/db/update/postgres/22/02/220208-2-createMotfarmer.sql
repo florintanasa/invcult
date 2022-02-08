@@ -1,0 +1,1 @@
+create unique index IDX_INVCULT_MOTFARMER_UK_NAME on INVCULT_MOTFARMER (NAME) where DELETE_TS is null ;

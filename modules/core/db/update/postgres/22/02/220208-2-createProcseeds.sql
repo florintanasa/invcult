@@ -1,0 +1,1 @@
+create unique index IDX_INVCULT_PROCSEEDS_UK_NAME on INVCULT_PROCSEEDS (NAME) where DELETE_TS is null ;

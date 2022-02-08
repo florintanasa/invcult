@@ -1,0 +1,1 @@
+create unique index IDX_INVCULT_PARTPLANT_UK_NAME on INVCULT_PARTPLANT (NAME) where DELETE_TS is null ;
