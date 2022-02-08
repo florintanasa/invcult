@@ -183,12 +183,12 @@ create table INVCULT_INVENTORY (
     DATE_ date not null,
     ID_PERSONS_ID uuid not null,
     NRINV varchar(50),
-    LOCINV_ID uuid not null,
+    ID_LOCINV_ID uuid not null,
     LATITUDINE varchar(50),
     LONGITUDINE varchar(50),
     ALTTITUDINE integer,
     ID_FARMERS_ID uuid not null,
-    LOCFERMA_ID uuid not null,
+    ID_LOCFERMA_ID uuid not null,
     --
     primary key (ID)
 )^
