@@ -29,9 +29,9 @@ public class Inventory extends StandardEntity {
 
     @Lookup(type = LookupType.DROPDOWN, actions = {"lookup", "open", "clear"})
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "LOCINV_ID")
+    @JoinColumn(name = "ID_LOCINV_ID")
     @NotNull
-    private Localitysiruta locinv;
+    private Localitysiruta idLocinv;
 
     @Column(name = "LATITUDINE", length = 50)
     private String latitudine;
@@ -51,8 +51,22 @@ public class Inventory extends StandardEntity {
     @Lookup(type = LookupType.DROPDOWN, actions = {"lookup", "open", "clear"})
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "LOCFERMA_ID")
-    private Location locferma;
+    @JoinColumn(name = "ID_LOCFERMA_ID")
+    private Location idLocferma;
+
+    @NotNull
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "ID_SYSAGR_ID")
+    @Lookup(type = LookupType.DROPDOWN, actions = {"lookup", "open", "clear"})
+    private Sysagr idSysagr;
+
+    public Sysagr getIdSysagr() {
+        return idSysagr;
+    }
+
+    public void setIdSysagr(Sysagr idSysagr) {
+        this.idSysagr = idSysagr;
+    }
 
     public void setAlttitudine(Integer alttitudine) {
         this.alttitudine = alttitudine;
@@ -62,20 +76,20 @@ public class Inventory extends StandardEntity {
         return alttitudine;
     }
 
-    public void setLocinv(Localitysiruta locinv) {
-        this.locinv = locinv;
+    public void setIdLocinv(Localitysiruta idLocinv) {
+        this.idLocinv = idLocinv;
     }
 
-    public Localitysiruta getLocinv() {
-        return locinv;
+    public Localitysiruta getIdLocinv() {
+        return idLocinv;
     }
 
-    public Location getLocferma() {
-        return locferma;
+    public Location getIdLocferma() {
+        return idLocferma;
     }
 
-    public void setLocferma(Location locferma) {
-        this.locferma = locferma;
+    public void setIdLocferma(Location idLocferma) {
+        this.idLocferma = idLocferma;
     }
 
     public Farmers getIdFarmers() {
