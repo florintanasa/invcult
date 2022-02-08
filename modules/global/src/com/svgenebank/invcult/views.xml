@@ -41,4 +41,5 @@
     <view entity="invcult_Crops" name="crops-minimal-view" extends="_minimal"/>
     <view entity="invcult_Persons" name="persons-all-view" extends="_local"/>
     <view entity="invcult_Persons" name="persons-minimal-view" extends="_minimal"/>
+    <view entity="invcult_Sysagr" name="sysagr-all-view" extends="_local"/>
 </views>

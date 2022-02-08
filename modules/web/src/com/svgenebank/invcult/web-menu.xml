@@ -13,5 +13,6 @@
         <item screen="invcult_Street.browse" caption="mainMsg://menu_config.invcult_Street.browse"/>
         <item screen="invcult_Tippersoana.browse" caption="mainMsg://menu_config.invcult_Tippersoana.browse"/>
         <item screen="invcult_Crops.browse" caption="mainMsg://menu_config.invcult_Crops.browse"/>
+        <item screen="invcult_Sysagr.browse" caption="mainMsg://menu_config.invcult_Sysagr.browse"/>
     </menu>
 </menu-config>
