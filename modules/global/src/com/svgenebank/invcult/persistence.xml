@@ -13,5 +13,16 @@
         <class>com.svgenebank.invcult.entity.Crops</class>
         <class>com.svgenebank.invcult.entity.Inventory</class>
         <class>com.svgenebank.invcult.entity.Persons</class>
+        <class>com.svgenebank.invcult.entity.Sysagr</class>
+        <class>com.svgenebank.invcult.entity.Motfarmer</class>
+        <class>com.svgenebank.invcult.entity.Oldvar</class>
+        <class>com.svgenebank.invcult.entity.Procseeds</class>
+        <class>com.svgenebank.invcult.entity.Selcrit</class>
+        <class>com.svgenebank.invcult.entity.Cultmet</class>
+        <class>com.svgenebank.invcult.entity.Dryplace</class>
+        <class>com.svgenebank.invcult.entity.Storplace</class>
+        <class>com.svgenebank.invcult.entity.Storcont</class>
+        <class>com.svgenebank.invcult.entity.Partplant</class>
+        <class>com.svgenebank.invcult.entity.Usepoploc</class>
     </persistence-unit>
 </persistence>
