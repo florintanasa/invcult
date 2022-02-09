@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
+        caption="msg://motfarmerBrowse.caption"
+        focusComponent="motfarmersTable"
+        messagesPack="com.svgenebank.invcult.web.screens.motfarmer">
+    <data readOnly="true">
+        <collection id="motfarmersDc"
+                    class="com.svgenebank.invcult.entity.Motfarmer"
+                    view="motfarmer-all-view">
+            <loader id="motfarmersDl">
+                <query>
+                    <![CDATA[select e from invcult_Motfarmer e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="motfarmersTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="motfarmersTable"
+                dataLoader="motfarmersDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="motfarmersTable"
+                    width="100%"
+                    dataContainer="motfarmersDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+                <action id="refresh" type="refresh"/>
+                <action id="excel" type="excel"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="motfarmersTable.create"/>
+                <button id="editBtn" action="motfarmersTable.edit"/>
+                <button id="removeBtn" action="motfarmersTable.remove"/>
+                <button id="refreshBtn" action="motfarmersTable.refresh"/>
+                <button id="excelBtn" action="motfarmersTable.excel"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>
