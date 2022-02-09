@@ -17,5 +17,6 @@
         <item screen="invcult_Motfarmer.browse" caption="mainMsg://menu_config.invcult_Motfarmer.browse"/>
         <item screen="invcult_Oldvar.browse" caption="mainMsg://menu_config.invcult_Oldvar.browse"/>
         <item screen="invcult_Procseeds.browse" caption="mainMsg://menu_config.invcult_Procseeds.browse"/>
+        <item screen="invcult_Selcrit.browse" caption="mainMsg://menu_config.invcult_Selcrit.browse"/>
     </menu>
 </menu-config>
