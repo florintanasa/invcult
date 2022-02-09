@@ -14,5 +14,7 @@
         <item screen="invcult_Tippersoana.browse" caption="mainMsg://menu_config.invcult_Tippersoana.browse"/>
         <item screen="invcult_Crops.browse" caption="mainMsg://menu_config.invcult_Crops.browse"/>
         <item screen="invcult_Sysagr.browse" caption="mainMsg://menu_config.invcult_Sysagr.browse"/>
+        <item screen="invcult_Motfarmer.browse" caption="mainMsg://menu_config.invcult_Motfarmer.browse"/>
+        <item screen="invcult_Oldvar.browse" caption="mainMsg://menu_config.invcult_Oldvar.browse"/>
     </menu>
 </menu-config>
