@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
+        caption="msg://procseedsBrowse.caption"
+        focusComponent="procseedsesTable"
+        messagesPack="com.svgenebank.invcult.web.screens.procseeds">
+    <data readOnly="true">
+        <collection id="procseedsesDc"
+                    class="com.svgenebank.invcult.entity.Procseeds"
+                    view="procseeds-all-view">
+            <loader id="procseedsesDl">
+                <query>
+                    <![CDATA[select e from invcult_Procseeds e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="procseedsesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="procseedsesTable"
+                dataLoader="procseedsesDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="procseedsesTable"
+                    width="100%"
+                    dataContainer="procseedsesDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+                <action id="refresh" type="refresh"/>
+                <action id="excel" type="excel"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="procseedsesTable.create"/>
+                <button id="editBtn" action="procseedsesTable.edit"/>
+                <button id="removeBtn" action="procseedsesTable.remove"/>
+                <button id="refreshBtn" action="procseedsesTable.refresh"/>
+                <button id="excelBtn" action="procseedsesTable.excel"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

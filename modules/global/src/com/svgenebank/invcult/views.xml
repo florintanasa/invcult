@@ -44,4 +44,5 @@
     <view entity="invcult_Sysagr" name="sysagr-all-view" extends="_local"/>
     <view entity="invcult_Motfarmer" name="motfarmer-all-view" extends="_local"/>
     <view entity="invcult_Oldvar" name="oldvar-all-view" extends="_local"/>
+    <view entity="invcult_Procseeds" name="procseeds-all-view" extends="_local"/>
 </views>
