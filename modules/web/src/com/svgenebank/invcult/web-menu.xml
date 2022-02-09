@@ -18,5 +18,6 @@
         <item screen="invcult_Oldvar.browse" caption="mainMsg://menu_config.invcult_Oldvar.browse"/>
         <item screen="invcult_Procseeds.browse" caption="mainMsg://menu_config.invcult_Procseeds.browse"/>
         <item screen="invcult_Selcrit.browse" caption="mainMsg://menu_config.invcult_Selcrit.browse"/>
+        <item screen="invcult_Cultmet.browse" caption="mainMsg://menu_config.invcult_Cultmet.browse"/>
     </menu>
 </menu-config>
