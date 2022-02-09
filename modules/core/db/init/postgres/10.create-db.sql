@@ -189,6 +189,7 @@ create table INVCULT_INVENTORY (
     ALTTITUDINE integer,
     ID_FARMERS_ID uuid not null,
     ID_LOCFERMA_ID uuid not null,
+    ID_SYSAGR_ID uuid not null,
     --
     primary key (ID)
 )^
