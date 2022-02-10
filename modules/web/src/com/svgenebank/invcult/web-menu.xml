@@ -26,6 +26,7 @@
             <item screen="invcult_Storplace.browse" caption="mainMsg://menu_config.invcult_Storplace.browse"/>
             <item screen="invcult_Storcont.browse" caption="mainMsg://menu_config.invcult_Storcont.browse"/>
             <item screen="invcult_Usepoploc.browse" caption="mainMsg://menu_config.invcult_Usepoploc.browse"/>
+            <item screen="invcult_Partplant.browse" caption="mainMsg://menu_config.invcult_Partplant.browse"/>
         </menu>
     </menu>
 </menu-config>

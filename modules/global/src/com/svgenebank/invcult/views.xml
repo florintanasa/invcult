@@ -51,4 +51,5 @@
     <view entity="invcult_Storplace" name="storplace-all-view" extends="_local"/>
     <view entity="invcult_Storcont" name="storcont-all-view" extends="_local"/>
     <view entity="invcult_Usepoploc" name="usepoploc-all-view" extends="_local"/>
+    <view entity="invcult_Partplant" name="partplant-all-view" extends="_local"/>
 </views>
