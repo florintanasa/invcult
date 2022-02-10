@@ -23,6 +23,7 @@
             <item screen="invcult_Selcrit.browse" caption="mainMsg://menu_config.invcult_Selcrit.browse"/>
             <item screen="invcult_Cultmet.browse" caption="mainMsg://menu_config.invcult_Cultmet.browse"/>
             <item screen="invcult_Dryplace.browse" caption="mainMsg://menu_config.invcult_Dryplace.browse"/>
+            <item screen="invcult_Storplace.browse" caption="mainMsg://menu_config.invcult_Storplace.browse"/>
         </menu>
     </menu>
 </menu-config>
