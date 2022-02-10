@@ -49,4 +49,5 @@
     <view entity="invcult_Cultmet" name="cultmet-all-view" extends="_local"/>
     <view entity="invcult_Dryplace" name="dryplace-all-view" extends="_local"/>
     <view entity="invcult_Storplace" name="storplace-all-view" extends="_local"/>
+    <view entity="invcult_Storcont" name="storcont-all-view" extends="_local"/>
 </views>
