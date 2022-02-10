@@ -47,4 +47,5 @@
     <view entity="invcult_Procseeds" name="procseeds-all-view" extends="_local"/>
     <view entity="invcult_Selcrit" name="selcrit-all-view" extends="_local"/>
     <view entity="invcult_Cultmet" name="cultmet-all-view" extends="_local"/>
+    <view entity="invcult_Dryplace" name="dryplace-all-view" extends="_local"/>
 </views>

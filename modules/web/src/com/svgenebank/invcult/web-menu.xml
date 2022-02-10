@@ -6,18 +6,23 @@
         <item screen="invcult_Persons.browse" caption="mainMsg://menu_config.invcult_Persons.browse"/>
     </menu>
     <menu id="setting-invcult" caption="mainMsg://menu_config.setting-invcult" insertBefore="administration">
-        <item screen="invcult_Zonesiruta.browse" caption="mainMsg://menu_config.invcult_Zonesiruta.browse"/>
-        <item screen="invcult_Countysiruta.browse" caption="mainMsg://menu_config.invcult_Countysiruta.browse"/>
-        <item screen="invcult_Localitysiruta.browse" caption="mainMsg://menu_config.invcult_Localitysiruta.browse"/>
-        <item screen="invcult_Roadtype.browse" caption="mainMsg://menu_config.invcult_Roadtype.browse"/>
-        <item screen="invcult_Street.browse" caption="mainMsg://menu_config.invcult_Street.browse"/>
-        <item screen="invcult_Tippersoana.browse" caption="mainMsg://menu_config.invcult_Tippersoana.browse"/>
-        <item screen="invcult_Crops.browse" caption="mainMsg://menu_config.invcult_Crops.browse"/>
-        <item screen="invcult_Sysagr.browse" caption="mainMsg://menu_config.invcult_Sysagr.browse"/>
-        <item screen="invcult_Motfarmer.browse" caption="mainMsg://menu_config.invcult_Motfarmer.browse"/>
-        <item screen="invcult_Oldvar.browse" caption="mainMsg://menu_config.invcult_Oldvar.browse"/>
-        <item screen="invcult_Procseeds.browse" caption="mainMsg://menu_config.invcult_Procseeds.browse"/>
-        <item screen="invcult_Selcrit.browse" caption="mainMsg://menu_config.invcult_Selcrit.browse"/>
-        <item screen="invcult_Cultmet.browse" caption="mainMsg://menu_config.invcult_Cultmet.browse"/>
+        <menu id="administrativ-invcult" caption="mainMsg://menu_config.administrativ-invcult">
+            <item screen="invcult_Zonesiruta.browse" caption="mainMsg://menu_config.invcult_Zonesiruta.browse"/>
+            <item screen="invcult_Countysiruta.browse" caption="mainMsg://menu_config.invcult_Countysiruta.browse"/>
+            <item screen="invcult_Localitysiruta.browse" caption="mainMsg://menu_config.invcult_Localitysiruta.browse"/>
+            <item screen="invcult_Roadtype.browse" caption="mainMsg://menu_config.invcult_Roadtype.browse"/>
+            <item screen="invcult_Street.browse" caption="mainMsg://menu_config.invcult_Street.browse"/>
+            <item screen="invcult_Tippersoana.browse" caption="mainMsg://menu_config.invcult_Tippersoana.browse"/>
+        </menu>
+        <menu id="technological-invcult" caption="mainMsg://menu_config.technological-invcult">
+            <item screen="invcult_Crops.browse" caption="mainMsg://menu_config.invcult_Crops.browse"/>
+            <item screen="invcult_Sysagr.browse" caption="mainMsg://menu_config.invcult_Sysagr.browse"/>
+            <item screen="invcult_Motfarmer.browse" caption="mainMsg://menu_config.invcult_Motfarmer.browse"/>
+            <item screen="invcult_Oldvar.browse" caption="mainMsg://menu_config.invcult_Oldvar.browse"/>
+            <item screen="invcult_Procseeds.browse" caption="mainMsg://menu_config.invcult_Procseeds.browse"/>
+            <item screen="invcult_Selcrit.browse" caption="mainMsg://menu_config.invcult_Selcrit.browse"/>
+            <item screen="invcult_Cultmet.browse" caption="mainMsg://menu_config.invcult_Cultmet.browse"/>
+            <item screen="invcult_Dryplace.browse" caption="mainMsg://menu_config.invcult_Dryplace.browse"/>
+        </menu>
     </menu>
 </menu-config>

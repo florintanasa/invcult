@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
+        caption="msg://dryplaceBrowse.caption"
+        focusComponent="dryplacesTable"
+        messagesPack="com.svgenebank.invcult.web.screens.dryplace">
+    <data readOnly="true">
+        <collection id="dryplacesDc"
+                    class="com.svgenebank.invcult.entity.Dryplace"
+                    view="dryplace-all-view">
+            <loader id="dryplacesDl">
+                <query>
+                    <![CDATA[select e from invcult_Dryplace e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="dryplacesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="dryplacesTable"
+                dataLoader="dryplacesDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="dryplacesTable"
+                    width="100%"
+                    dataContainer="dryplacesDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+                <action id="refresh" type="refresh"/>
+                <action id="excel" type="excel"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="dryplacesTable.create"/>
+                <button id="editBtn" action="dryplacesTable.edit"/>
+                <button id="removeBtn" action="dryplacesTable.remove"/>
+                <button id="refreshBtn" action="dryplacesTable.refresh"/>
+                <button id="excelBtn" action="dryplacesTable.excel"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>
