@@ -25,6 +25,7 @@
             <item screen="invcult_Dryplace.browse" caption="mainMsg://menu_config.invcult_Dryplace.browse"/>
             <item screen="invcult_Storplace.browse" caption="mainMsg://menu_config.invcult_Storplace.browse"/>
             <item screen="invcult_Storcont.browse" caption="mainMsg://menu_config.invcult_Storcont.browse"/>
+            <item screen="invcult_Usepoploc.browse" caption="mainMsg://menu_config.invcult_Usepoploc.browse"/>
         </menu>
     </menu>
 </menu-config>

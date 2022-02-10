@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
+        caption="msg://usepoplocBrowse.caption"
+        focusComponent="usepoplocsTable"
+        messagesPack="com.svgenebank.invcult.web.screens.usepoploc">
+    <data readOnly="true">
+        <collection id="usepoplocsDc"
+                    class="com.svgenebank.invcult.entity.Usepoploc"
+                    view="usepoploc-all-view">
+            <loader id="usepoplocsDl">
+                <query>
+                    <![CDATA[select e from invcult_Usepoploc e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="usepoplocsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="usepoplocsTable"
+                dataLoader="usepoplocsDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="usepoplocsTable"
+                    width="100%"
+                    dataContainer="usepoplocsDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+                <action id="refresh" type="refresh"/>
+                <action id="excel" type="excel"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="usepoplocsTable.create"/>
+                <button id="editBtn" action="usepoplocsTable.edit"/>
+                <button id="removeBtn" action="usepoplocsTable.remove"/>
+                <button id="refreshBtn" action="usepoplocsTable.refresh"/>
+                <button id="excelBtn" action="usepoplocsTable.excel"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>
