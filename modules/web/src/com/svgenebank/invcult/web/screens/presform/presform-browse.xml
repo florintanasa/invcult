@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
+        caption="msg://presformBrowse.caption"
+        focusComponent="presformsTable"
+        messagesPack="com.svgenebank.invcult.web.screens.presform">
+    <data readOnly="true">
+        <collection id="presformsDc"
+                    class="com.svgenebank.invcult.entity.Presform"
+                    view="presform-all-view">
+            <loader id="presformsDl">
+                <query>
+                    <![CDATA[select e from invcult_Presform e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="presformsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="presformsTable"
+                dataLoader="presformsDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="presformsTable"
+                    width="100%"
+                    dataContainer="presformsDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+                <action id="refresh" type="refresh"/>
+                <action id="excel" type="excel"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="presformsTable.create"/>
+                <button id="editBtn" action="presformsTable.edit"/>
+                <button id="removeBtn" action="presformsTable.remove"/>
+                <button id="refreshBtn" action="presformsTable.refresh"/>
+                <button id="excelBtn" action="presformsTable.excel"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>
