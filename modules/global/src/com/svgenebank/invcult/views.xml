@@ -12,7 +12,9 @@
     </view>
     <view entity="invcult_Countysiruta" name="countysiruta-minimal-view" extends="_minimal"/>
     <view entity="invcult_Localitysiruta" name="localitysiruta-all-view" extends="_local">
-        <property name="id_countysiruta" view="_minimal"/>
+        <property name="id_countysiruta" view="_minimal">
+            <property name="id_zonesiruta" view="_minimal"/>
+        </property>
     </view>
     <view entity="invcult_Localitysiruta" name="localitysiruta-minimal-view" extends="_minimal"/>
     <view entity="invcult_Tippersoana" name="tippersoana-all-view" extends="_local"/>
@@ -27,7 +29,11 @@
     <view entity="invcult_Street" name="street-minimal-view" extends="_minimal"/>
     <view entity="invcult_Location" name="location-all-view" extends="_local">
         <property name="idFarmers" view="_minimal"/>
-        <property name="idLocalirysiruta" view="_minimal"/>
+        <property name="idLocalirysiruta" view="_minimal">
+            <property name="id_countysiruta" view="_minimal">
+                <property name="id_zonesiruta" view="_minimal"/>
+            </property>
+        </property>
         <property name="idRoadtype" view="_minimal"/>
         <property name="idStreet" view="_minimal"/>
     </view>
