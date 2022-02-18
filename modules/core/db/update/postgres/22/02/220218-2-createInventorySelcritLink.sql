@@ -1,0 +1,2 @@
+alter table INVCULT_INVENTORY_SELCRIT_LINK add constraint FK_INVSEL_ON_INVENTORY foreign key (INVENTORY_ID) references INVCULT_INVENTORY(ID);
+alter table INVCULT_INVENTORY_SELCRIT_LINK add constraint FK_INVSEL_ON_SELCRIT foreign key (SELCRIT_ID) references INVCULT_SELCRIT(ID);

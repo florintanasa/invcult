@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
+        caption="msg://inventoryBrowse.caption"
+        focusComponent="inventoriesTable"
+        messagesPack="com.svgenebank.invcult.web.screens.inventory">
+    <data readOnly="true">
+        <collection id="inventoriesDc"
+                    class="com.svgenebank.invcult.entity.Inventory"
+                    view="inventory-all-view">
+            <loader id="inventoriesDl">
+                <query>
+                    <![CDATA[select e from invcult_Inventory e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="inventoriesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="inventoriesTable"
+                dataLoader="inventoriesDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="inventoriesTable"
+                    width="100%"
+                    dataContainer="inventoriesDc"
+                    multiselect="true">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+                <action id="refresh" type="refresh"/>
+                <action id="excel" type="excel"/>
+            </actions>
+            <columns>
+                <column id="date"/>
+                <column id="idPersons"/>
+                <column id="nrinv"/>
+                <column id="idLocinv"/>
+                <column id="latitudine"/>
+                <column id="longitudine"/>
+                <column id="alttitudine"/>
+                <column id="idFarmers"/>
+                <column id="idLocferma"/>
+                <column id="idCrops"/>
+                <column id="idSysagr"/>
+                <column id="islocpop"/>
+                <column id="idOldvar"/>
+                <column id="idCultmet"/>
+                <column id="iscultrot"/>
+                <column id="isfert"/>
+                <column id="istreaty"/>
+                <column id="issprayer"/>
+                <column id="idDryplace"/>
+                <column id="idStorplace"/>
+                <column id="idPresform"/>
+                <column id="idStorcont"/>
+                <column id="remarks"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="inventoriesTable.create"/>
+                <button id="editBtn" action="inventoriesTable.edit"/>
+                <button id="removeBtn" action="inventoriesTable.remove"/>
+                <button id="refreshBtn" action="inventoriesTable.refresh"/>
+                <button id="excelBtn" action="inventoriesTable.excel"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

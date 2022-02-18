@@ -26,7 +26,7 @@
         </filter>
         <groupTable id="usepoplocsTable"
                     width="100%"
-                    dataContainer="usepoplocsDc">
+                    dataContainer="usepoplocsDc" multiselect="true">
             <actions>
                 <action id="create" type="create"/>
                 <action id="edit" type="edit"/>

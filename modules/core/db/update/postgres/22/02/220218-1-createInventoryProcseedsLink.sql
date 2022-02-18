@@ -1,0 +1,5 @@
+create table INVCULT_INVENTORY_PROCSEEDS_LINK (
+    PROCSEEDS_ID uuid,
+    INVENTORY_ID uuid,
+    primary key (PROCSEEDS_ID, INVENTORY_ID)
+);

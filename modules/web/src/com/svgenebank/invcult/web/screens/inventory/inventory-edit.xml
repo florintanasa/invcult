@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://inventoryEdit.caption"
+        focusComponent="form"
+        messagesPack="com.svgenebank.invcult.web.screens.inventory">
+    <data>
+        <instance id="inventoryDc"
+                  class="com.svgenebank.invcult.entity.Inventory"
+                  view="inventory-all-view">
+            <loader/>
+            <collection id="idMotfarmerDc" property="idMotfarmer"/>
+            <collection id="idProcseedsDc" property="idProcseeds"/>
+            <collection id="idSelcritDc" property="idSelcrit"/>
+            <collection id="idPartplantDc" property="idPartplant"/>
+            <collection id="idUsepoplocDc" property="idUsepoploc"/>
+        </instance>
+        <collection id="idPersonsesDc" class="com.svgenebank.invcult.entity.Persons" view="_minimal">
+            <loader id="idPersonsesDl">
+                <query>
+                    <![CDATA[select e from invcult_Persons e]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="idLocinvsDc" class="com.svgenebank.invcult.entity.Localitysiruta" view="_minimal">
+            <loader id="idLocinvsDl">
+                <query>
+                    <![CDATA[select e from invcult_Localitysiruta e]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="idFarmersesDc" class="com.svgenebank.invcult.entity.Farmers" view="_minimal">
+            <loader id="idFarmersesDl">
+                <query>
+                    <![CDATA[select e from invcult_Farmers e]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="idLocfermasDc" class="com.svgenebank.invcult.entity.Location" view="_minimal">
+            <loader id="idLocfermasDl">
+                <query>
+                    <![CDATA[select e from invcult_Location e]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="idSysagrsDc" class="com.svgenebank.invcult.entity.Sysagr" view="_minimal">
+            <loader id="idSysagrsDl">
+                <query>
+                    <![CDATA[select e from invcult_Sysagr e]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="idOldvarsDc" class="com.svgenebank.invcult.entity.Oldvar" view="_minimal">
+            <loader id="idOldvarsDl">
+                <query>
+                    <![CDATA[select e from invcult_Oldvar e]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="idCultmetsDc" class="com.svgenebank.invcult.entity.Cultmet" view="_minimal">
+            <loader id="idCultmetsDl">
+                <query>
+                    <![CDATA[select e from invcult_Cultmet e]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="idDryplacesDc" class="com.svgenebank.invcult.entity.Dryplace" view="_minimal">
+            <loader id="idDryplacesDl">
+                <query>
+                    <![CDATA[select e from invcult_Dryplace e]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="idStorplacesDc" class="com.svgenebank.invcult.entity.Storplace" view="_minimal">
+            <loader id="idStorplacesDl">
+                <query>
+                    <![CDATA[select e from invcult_Storplace e]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="idPresformsDc" class="com.svgenebank.invcult.entity.Presform" view="_minimal">
+            <loader id="idPresformsDl">
+                <query>
+                    <![CDATA[select e from invcult_Presform e]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="idStorcontsDc" class="com.svgenebank.invcult.entity.Storcont" view="_minimal">
+            <loader id="idStorcontsDl">
+                <query>
+                    <![CDATA[select e from invcult_Storcont e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="scrollBox" spacing="true">
+        <scrollBox id="scrollBox" spacing="true">
+            <form id="form" dataContainer="inventoryDc">
+                <column width="350px">
+                    <dateField id="dateField" property="date"/>
+                    <lookupPickerField id="idPersonsField" optionsContainer="idPersonsesDc" property="idPersons">
+                        <actions>
+                            <action id="lookup" type="picker_lookup"/>
+                            <action id="open" type="picker_open"/>
+                            <action id="clear" type="picker_clear"/>
+                        </actions>
+                    </lookupPickerField>
+                    <textField id="nrinvField" property="nrinv"/>
+                    <lookupPickerField id="idLocinvField" optionsContainer="idLocinvsDc" property="idLocinv">
+                        <actions>
+                            <action id="lookup" type="picker_lookup"/>
+                            <action id="open" type="picker_open"/>
+                            <action id="clear" type="picker_clear"/>
+                        </actions>
+                    </lookupPickerField>
+                    <textField id="latitudineField" property="latitudine"/>
+                    <textField id="longitudineField" property="longitudine"/>
+                    <textField id="alttitudineField" property="alttitudine"/>
+                    <lookupPickerField id="idFarmersField" optionsContainer="idFarmersesDc" property="idFarmers">
+                        <actions>
+                            <action id="lookup" type="picker_lookup"/>
+                            <action id="open" type="picker_open"/>
+                            <action id="clear" type="picker_clear"/>
+                        </actions>
+                    </lookupPickerField>
+                    <lookupPickerField id="idLocfermaField" optionsContainer="idLocfermasDc" property="idLocferma">
+                        <actions>
+                            <action id="lookup" type="picker_lookup"/>
+                            <action id="open" type="picker_open"/>
+                            <action id="clear" type="picker_clear"/>
+                        </actions>
+                    </lookupPickerField>
+                    <lookupPickerField id="idSysagrField" optionsContainer="idSysagrsDc" property="idSysagr">
+                        <actions>
+                            <action id="lookup" type="picker_lookup"/>
+                            <action id="open" type="picker_open"/>
+                            <action id="clear" type="picker_clear"/>
+                        </actions>
+                    </lookupPickerField>
+                    <checkBox id="islocpopField" property="islocpop"/>
+                    <lookupPickerField id="idOldvarField" optionsContainer="idOldvarsDc" property="idOldvar">
+                        <actions>
+                            <action id="lookup" type="picker_lookup"/>
+                            <action id="open" type="picker_open"/>
+                            <action id="clear" type="picker_clear"/>
+                        </actions>
+                    </lookupPickerField>
+                    <lookupPickerField id="idCultmetField" optionsContainer="idCultmetsDc" property="idCultmet">
+                        <actions>
+                            <action id="lookup" type="picker_lookup"/>
+                            <action id="open" type="picker_open"/>
+                            <action id="clear" type="picker_clear"/>
+                        </actions>
+                    </lookupPickerField>
+                    <checkBox id="iscultrotField" property="iscultrot"/>
+                    <checkBox id="isfertField" property="isfert"/>
+                    <checkBox id="istreatyFild" property="istreaty"/>
+                    <checkBox id="issprayerField" property="issprayer"/>
+                    <lookupPickerField id="idDryplaceField" optionsContainer="idDryplacesDc" property="idDryplace">
+                        <actions>
+                            <action id="lookup" type="picker_lookup"/>
+                            <action id="open" type="picker_open"/>
+                            <action id="clear" type="picker_clear"/>
+                        </actions>
+                    </lookupPickerField>
+                    <lookupPickerField id="idStorplaceField" optionsContainer="idStorplacesDc" property="idStorplace">
+                        <actions>
+                            <action id="lookup" type="picker_lookup"/>
+                            <action id="open" type="picker_open"/>
+                            <action id="clear" type="picker_clear"/>
+                        </actions>
+                    </lookupPickerField>
+                    <lookupPickerField id="idPresformField" optionsContainer="idPresformsDc" property="idPresform">
+                        <actions>
+                            <action id="lookup" type="picker_lookup"/>
+                            <action id="open" type="picker_open"/>
+                            <action id="clear" type="picker_clear"/>
+                        </actions>
+                    </lookupPickerField>
+                    <lookupPickerField id="idStorcontField" optionsContainer="idStorcontsDc" property="idStorcont">
+                        <actions>
+                            <action id="lookup" type="picker_lookup"/>
+                            <action id="open" type="picker_open"/>
+                            <action id="clear" type="picker_clear"/>
+                        </actions>
+                    </lookupPickerField>
+                    <textArea id="remarksField" property="remarks" rows="5"/>
+                </column>
+            </form>
+            <groupBox id="idMotfarmerBox" caption="msg://com.svgenebank.invcult.entity/Inventory.idMotfarmer">
+                <table id="idMotfarmerTable" dataContainer="idMotfarmerDc" width="100%" height="200px">
+                    <actions>
+                        <action id="add" type="add"/>
+                        <action id="exclude" type="exclude"/>
+                    </actions>
+                    <columns>
+                        <column id="name"/>
+                    </columns>
+                    <buttonsPanel>
+                        <button action="idMotfarmerTable.add"/>
+                        <button action="idMotfarmerTable.exclude"/>
+                    </buttonsPanel>
+                </table>
+            </groupBox>
+            <groupBox id="idProcseedsBox" caption="msg://com.svgenebank.invcult.entity/Inventory.idProcseeds">
+                <table id="idProcseedsTable" dataContainer="idProcseedsDc" width="100%" height="200px">
+                    <actions>
+                        <action id="add" type="add"/>
+                        <action id="exclude" type="exclude"/>
+                    </actions>
+                    <columns>
+                        <column id="name"/>
+                    </columns>
+                    <buttonsPanel>
+                        <button action="idProcseedsTable.add"/>
+                        <button action="idProcseedsTable.exclude"/>
+                    </buttonsPanel>
+                </table>
+            </groupBox>
+            <groupBox id="idSelcritBox" caption="msg://com.svgenebank.invcult.entity/Inventory.idSelcrit">
+                <table id="idSelcritTable" dataContainer="idSelcritDc" width="100%" height="200px">
+                    <actions>
+                        <action id="add" type="add"/>
+                        <action id="exclude" type="exclude"/>
+                    </actions>
+                    <columns>
+                        <column id="name"/>
+                    </columns>
+                    <buttonsPanel>
+                        <button action="idSelcritTable.add"/>
+                        <button action="idSelcritTable.exclude"/>
+                    </buttonsPanel>
+                </table>
+            </groupBox>
+            <groupBox id="idPartplantBox" caption="msg://com.svgenebank.invcult.entity/Inventory.idPartplant">
+                <table id="idPartplantTable" dataContainer="idPartplantDc" width="100%" height="200px">
+                    <actions>
+                        <action id="add" type="add"/>
+                        <action id="exclude" type="exclude"/>
+                    </actions>
+                    <columns>
+                        <column id="name"/>
+                    </columns>
+                    <buttonsPanel>
+                        <button action="idPartplantTable.add"/>
+                        <button action="idPartplantTable.exclude"/>
+                    </buttonsPanel>
+                </table>
+            </groupBox>
+            <groupBox id="idUsepoplocBox" caption="msg://com.svgenebank.invcult.entity/Inventory.idUsepoploc">
+                <table id="idUsepoplocTable" dataContainer="idUsepoplocDc" width="100%" height="200px">
+                    <actions>
+                        <action id="add" type="add"/>
+                        <action id="exclude" type="exclude"/>
+                    </actions>
+                    <columns>
+                        <column id="name"/>
+                    </columns>
+                    <buttonsPanel>
+                        <button action="idUsepoplocTable.add"/>
+                        <button action="idUsepoplocTable.exclude"/>
+                    </buttonsPanel>
+                </table>
+            </groupBox>
+        </scrollBox>
+        <hbox id="editActions" spacing="true">
+            <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
+            <button id="closeBtn" action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

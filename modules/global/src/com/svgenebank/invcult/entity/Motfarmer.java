@@ -3,10 +3,9 @@ package com.svgenebank.invcult.entity;
 import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.Set;
 
 @Table(name = "INVCULT_MOTFARMER")
 @Entity(name = "invcult_Motfarmer")
@@ -17,6 +16,19 @@ public class Motfarmer extends StandardEntity {
     @NotNull
     @Column(name = "NAME", nullable = false, unique = true)
     private String name;
+    @JoinTable(name = "INVCULT_INVENTORY_MOTFARMER_LINK",
+            joinColumns = @JoinColumn(name = "MOTFARMER_ID"),
+            inverseJoinColumns = @JoinColumn(name = "INVENTORY_ID"))
+    @ManyToMany
+    private Set<Inventory> inventories;
+
+    public Set<Inventory> getInventories() {
+        return inventories;
+    }
+
+    public void setInventories(Set<Inventory> inventories) {
+        this.inventories = inventories;
+    }
 
     public String getName() {
         return name;

@@ -26,7 +26,7 @@
         </filter>
         <groupTable id="procseedsesTable"
                     width="100%"
-                    dataContainer="procseedsesDc">
+                    dataContainer="procseedsesDc" multiselect="true">
             <actions>
                 <action id="create" type="create"/>
                 <action id="edit" type="edit"/>

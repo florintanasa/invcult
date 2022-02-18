@@ -25,7 +25,7 @@
         </filter>
         <groupTable id="selcritsTable"
                     width="100%"
-                    dataContainer="selcritsDc">
+                    dataContainer="selcritsDc" multiselect="true">
             <actions>
                 <action id="create" type="create"/>
                 <action id="edit" type="edit"/>

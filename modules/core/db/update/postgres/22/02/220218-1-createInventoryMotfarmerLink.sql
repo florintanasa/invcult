@@ -1,0 +1,5 @@
+create table INVCULT_INVENTORY_MOTFARMER_LINK (
+    MOTFARMER_ID uuid,
+    INVENTORY_ID uuid,
+    primary key (MOTFARMER_ID, INVENTORY_ID)
+);

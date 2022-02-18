@@ -1,0 +1,5 @@
+create table INVCULT_INVENTORY_USEPOPLOC_LINK (
+    INVENTORY_ID uuid,
+    USEPOPLOC_ID uuid,
+    primary key (INVENTORY_ID, USEPOPLOC_ID)
+);

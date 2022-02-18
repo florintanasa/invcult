@@ -189,7 +189,20 @@ create table INVCULT_INVENTORY (
     ALTTITUDINE integer,
     ID_FARMERS_ID uuid not null,
     ID_LOCFERMA_ID uuid not null,
+    ID_CROPS_ID uuid,
     ID_SYSAGR_ID uuid not null,
+    ISLOCPOP boolean not null,
+    ID_OLDVAR_ID uuid,
+    ID_CULTMET_ID uuid,
+    ISCULTROT boolean,
+    ISFERT boolean,
+    ISTREATY boolean,
+    ISSPRAYER boolean,
+    ID_DRYPLACE_ID uuid,
+    ID_STORPLACE_ID uuid,
+    ID_PRESFORM_ID uuid,
+    ID_STORCONT_ID uuid,
+    REMARKS text,
     --
     primary key (ID)
 )^
@@ -402,3 +415,38 @@ create table INVCULT_PRESFORM (
     primary key (ID)
 )^
 -- end INVCULT_PRESFORM
+-- begin INVCULT_INVENTORY_SELCRIT_LINK
+create table INVCULT_INVENTORY_SELCRIT_LINK (
+    INVENTORY_ID uuid,
+    SELCRIT_ID uuid,
+    primary key (INVENTORY_ID, SELCRIT_ID)
+)^
+-- end INVCULT_INVENTORY_SELCRIT_LINK
+-- begin INVCULT_INVENTORY_PARTPLANT_LINK
+create table INVCULT_INVENTORY_PARTPLANT_LINK (
+    PARTPLANT_ID uuid,
+    INVENTORY_ID uuid,
+    primary key (PARTPLANT_ID, INVENTORY_ID)
+)^
+-- end INVCULT_INVENTORY_PARTPLANT_LINK
+-- begin INVCULT_INVENTORY_PROCSEEDS_LINK
+create table INVCULT_INVENTORY_PROCSEEDS_LINK (
+    PROCSEEDS_ID uuid,
+    INVENTORY_ID uuid,
+    primary key (PROCSEEDS_ID, INVENTORY_ID)
+)^
+-- end INVCULT_INVENTORY_PROCSEEDS_LINK
+-- begin INVCULT_INVENTORY_USEPOPLOC_LINK
+create table INVCULT_INVENTORY_USEPOPLOC_LINK (
+    INVENTORY_ID uuid,
+    USEPOPLOC_ID uuid,
+    primary key (INVENTORY_ID, USEPOPLOC_ID)
+)^
+-- end INVCULT_INVENTORY_USEPOPLOC_LINK
+-- begin INVCULT_INVENTORY_MOTFARMER_LINK
+create table INVCULT_INVENTORY_MOTFARMER_LINK (
+    MOTFARMER_ID uuid,
+    INVENTORY_ID uuid,
+    primary key (MOTFARMER_ID, INVENTORY_ID)
+)^
+-- end INVCULT_INVENTORY_MOTFARMER_LINK

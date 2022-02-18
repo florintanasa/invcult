@@ -59,4 +59,27 @@
     <view entity="invcult_Usepoploc" name="usepoploc-all-view" extends="_local"/>
     <view entity="invcult_Partplant" name="partplant-all-view" extends="_local"/>
     <view entity="invcult_Presform" name="presform-all-view" extends="_local"/>
+    <view entity="invcult_Inventory" name="inventory-all-view" extends="_local">
+        <property name="idPersons" view="_minimal"/>
+        <property name="idLocinv" view="_minimal">
+            <property name="siruta"/>
+        </property>
+        <property name="idFarmers" view="_minimal">
+            <property name="idTippersoana" view="_minimal"/>
+        </property>
+        <property name="idLocferma" view="_minimal"/>
+        <property name="idSysagr" view="_minimal"/>
+        <property name="idMotfarmer" view="_minimal"/>
+        <property name="idOldvar" view="_minimal"/>
+        <property name="idProcseeds" view="_minimal"/>
+        <property name="idSelcrit" view="_minimal"/>
+        <property name="idCultmet" view="_minimal"/>
+        <property name="idDryplace" view="_minimal"/>
+        <property name="idStorplace" view="_minimal"/>
+        <property name="idPresform" view="_minimal"/>
+        <property name="idStorcont" view="_minimal"/>
+        <property name="idPartplant" view="_minimal"/>
+        <property name="idUsepoploc" view="_minimal"/>
+        <property name="idCrops" view="_minimal"/>
+    </view>
 </views>
