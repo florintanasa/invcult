@@ -83,4 +83,7 @@
         <property name="idCrops" view="_minimal"/>
     </view>
     <view entity="invcult_Typeworkdiv" name="typeworkdiv-all-view" extends="_local"/>
+    <view entity="invcult_Workdivision" name="workdivision-all-view" extends="_local">
+        <property name="idTypeworkdiv" view="_minimal"/>
+    </view>
 </views>

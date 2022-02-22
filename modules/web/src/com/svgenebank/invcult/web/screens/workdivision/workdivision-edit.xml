@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://workdivisionEdit.caption"
+        focusComponent="form"
+        messagesPack="com.svgenebank.invcult.web.screens.workdivision">
+    <data>
+        <instance id="workdivisionDc"
+                  class="com.svgenebank.invcult.entity.Workdivision"
+                  view="workdivision-all-view">
+            <loader/>
+        </instance>
+        <collection id="idTypeworkdivsDc" class="com.svgenebank.invcult.entity.Typeworkdiv" view="_minimal">
+            <loader id="idTypeworkdivsDl">
+                <query>
+                    <![CDATA[select e from invcult_Typeworkdiv e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="workdivisionDc">
+            <column width="350px">
+                <lookupPickerField id="idTypeworkdivField" optionsContainer="idTypeworkdivsDc" property="idTypeworkdiv">
+                    <actions>
+                        <action id="lookup" type="picker_lookup"/>
+                        <action id="open" type="picker_open"/>
+                        <action id="clear" type="picker_clear"/>
+                    </actions>
+                </lookupPickerField>
+                <checkBox id="femaleField" property="female"/>
+                <checkBox id="maleField" property="male"/>
+                <checkBox id="familyField" property="family"/>
+                <checkBox id="othersField" property="others"/>
+                <checkBox id="allField" property="all"/>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
+            <button id="closeBtn" action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

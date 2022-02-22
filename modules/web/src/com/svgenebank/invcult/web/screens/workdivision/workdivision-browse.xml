@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
+        caption="msg://workdivisionBrowse.caption"
+        focusComponent="workdivisionsTable"
+        messagesPack="com.svgenebank.invcult.web.screens.workdivision">
+    <data readOnly="true">
+        <collection id="workdivisionsDc"
+                    class="com.svgenebank.invcult.entity.Workdivision"
+                    view="workdivision-all-view">
+            <loader id="workdivisionsDl">
+                <query>
+                    <![CDATA[select e from invcult_Workdivision e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="workdivisionsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="workdivisionsTable"
+                dataLoader="workdivisionsDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="workdivisionsTable"
+                    width="100%"
+                    dataContainer="workdivisionsDc"
+                    multiselect="true">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+                <action id="refresh" type="refresh"/>
+                <action id="excel" type="excel"/>
+            </actions>
+            <columns>
+                <column id="idTypeworkdiv"/>
+                <column id="female"/>
+                <column id="male"/>
+                <column id="family"/>
+                <column id="others"/>
+                <column id="all"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="workdivisionsTable.create"/>
+                <button id="editBtn" action="workdivisionsTable.edit"/>
+                <button id="removeBtn" action="workdivisionsTable.remove"/>
+                <button id="refreshBtn" action="workdivisionsTable.refresh"/>
+                <button id="excelBtn" action="workdivisionsTable.excel"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>
