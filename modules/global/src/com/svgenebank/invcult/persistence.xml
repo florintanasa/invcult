@@ -25,5 +25,6 @@
         <class>com.svgenebank.invcult.entity.Partplant</class>
         <class>com.svgenebank.invcult.entity.Usepoploc</class>
         <class>com.svgenebank.invcult.entity.Presform</class>
+        <class>com.svgenebank.invcult.entity.Typeworkdiv</class>
     </persistence-unit>
 </persistence>

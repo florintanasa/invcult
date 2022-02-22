@@ -82,4 +82,5 @@
         <property name="idUsepoploc" view="_minimal"/>
         <property name="idCrops" view="_minimal"/>
     </view>
+    <view entity="invcult_Typeworkdiv" name="typeworkdiv-all-view" extends="_local"/>
 </views>
