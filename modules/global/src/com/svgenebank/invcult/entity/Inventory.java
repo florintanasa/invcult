@@ -1,9 +1,12 @@
 package com.svgenebank.invcult.entity;
 
+import com.haulmont.chile.core.annotations.Composition;
 import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 import com.haulmont.cuba.core.entity.annotation.Lookup;
 import com.haulmont.cuba.core.entity.annotation.LookupType;
+import com.haulmont.cuba.core.entity.annotation.OnDelete;
+import com.haulmont.cuba.core.global.DeletePolicy;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -27,7 +30,7 @@ public class Inventory extends StandardEntity {
     @JoinColumn(name = "ID_PERSONS_ID")
     private Persons idPersons;
 
-    @Column(name = "NRINV", length = 50)
+    @Column(name = "NRINV", unique = true, length = 50)
     private String nrinv;
 
     @Lookup(type = LookupType.DROPDOWN, actions = {"lookup", "open", "clear"})
@@ -132,6 +135,11 @@ public class Inventory extends StandardEntity {
     @JoinColumn(name = "ID_STORCONT_ID")
     private Storcont idStorcont;
 
+    @Composition
+    @OnDelete(DeletePolicy.CASCADE)
+    @OneToMany(mappedBy = "inventory")
+    private Set<Workdivision> idWorkdivision;
+
     @JoinTable(name = "INVCULT_INVENTORY_PARTPLANT_LINK",
             joinColumns = @JoinColumn(name = "INVENTORY_ID"),
             inverseJoinColumns = @JoinColumn(name = "PARTPLANT_ID"))
@@ -147,6 +155,14 @@ public class Inventory extends StandardEntity {
     @Lob
     @Column(name = "REMARKS")
     private String remarks;
+
+    public Set<Workdivision> getIdWorkdivision() {
+        return idWorkdivision;
+    }
+
+    public void setIdWorkdivision(Set<Workdivision> idWorkdivision) {
+        this.idWorkdivision = idWorkdivision;
+    }
 
     public Crops getIdCrops() {
         return idCrops;

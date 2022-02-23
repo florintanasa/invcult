@@ -483,6 +483,7 @@ create table INVCULT_WORKDIVISION (
     FAMILY boolean,
     OTHERS_ boolean,
     ALL_ boolean,
+    INVENTORY_ID uuid not null,
     --
     primary key (ID)
 )^

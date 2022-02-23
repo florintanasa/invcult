@@ -11,6 +11,7 @@
             <collection id="idMotfarmerDc" property="idMotfarmer"/>
             <collection id="idProcseedsDc" property="idProcseeds"/>
             <collection id="idSelcritDc" property="idSelcrit"/>
+            <collection id="idWorkdivisionDc" property="idWorkdivision"/>
             <collection id="idPartplantDc" property="idPartplant"/>
             <collection id="idUsepoplocDc" property="idUsepoploc"/>
         </instance>
@@ -91,6 +92,13 @@
                 </query>
             </loader>
         </collection>
+        <collection id="idCropsesDc" class="com.svgenebank.invcult.entity.Crops" view="_minimal">
+            <loader id="idCropsesDl">
+                <query>
+                    <![CDATA[select e from invcult_Crops e]]>
+                </query>
+            </loader>
+        </collection>
     </data>
     <dialogMode height="600"
                 width="800"/>
@@ -131,6 +139,13 @@
                             <action id="clear" type="picker_clear"/>
                         </actions>
                     </lookupPickerField>
+                    <lookupPickerField id="idCropsField" optionsContainer="idCropsesDc" property="idCrops">
+                        <actions>
+                            <action id="lookup" type="picker_lookup"/>
+                            <action id="open" type="picker_open"/>
+                            <action id="clear" type="picker_clear"/>
+                        </actions>
+                    </lookupPickerField>
                     <lookupPickerField id="idSysagrField" optionsContainer="idSysagrsDc" property="idSysagr">
                         <actions>
                             <action id="lookup" type="picker_lookup"/>
@@ -155,7 +170,7 @@
                     </lookupPickerField>
                     <checkBox id="iscultrotField" property="iscultrot"/>
                     <checkBox id="isfertField" property="isfert"/>
-                    <checkBox id="istreatyFild" property="istreaty"/>
+                    <checkBox id="istreatyField" property="istreaty"/>
                     <checkBox id="issprayerField" property="issprayer"/>
                     <lookupPickerField id="idDryplaceField" optionsContainer="idDryplacesDc" property="idDryplace">
                         <actions>
@@ -230,6 +245,28 @@
                     <buttonsPanel>
                         <button action="idSelcritTable.add"/>
                         <button action="idSelcritTable.exclude"/>
+                    </buttonsPanel>
+                </table>
+            </groupBox>
+            <groupBox id="idWorkdivisionBox" caption="msg://com.svgenebank.invcult.entity/Inventory.idWorkdivision">
+                <table id="idWorkdivisionTable" dataContainer="idWorkdivisionDc" width="100%" height="200px">
+                    <actions>
+                        <action id="create" type="create"/>
+                        <action id="edit" type="edit"/>
+                        <action id="remove" type="remove"/>
+                    </actions>
+                    <columns>
+                        <column id="idTypeworkdiv"/>
+                        <column id="female"/>
+                        <column id="male"/>
+                        <column id="others"/>
+                        <column id="family"/>
+                        <column id="all"/>
+                    </columns>
+                    <buttonsPanel>
+                        <button action="idWorkdivisionTable.create"/>
+                        <button action="idWorkdivisionTable.edit"/>
+                        <button action="idWorkdivisionTable.remove"/>
                     </buttonsPanel>
                 </table>
             </groupBox>

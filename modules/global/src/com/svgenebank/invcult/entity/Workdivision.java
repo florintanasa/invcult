@@ -34,6 +34,18 @@ public class Workdivision extends StandardEntity {
 
     @Column(name = "ALL_")
     private Boolean all;
+    @Lookup(type = LookupType.DROPDOWN, actions = {"lookup", "open", "clear"})
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "INVENTORY_ID")
+    private Inventory inventory;
+
+    public Inventory getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Inventory inventory) {
+        this.inventory = inventory;
+    }
 
     public Boolean getAll() {
         return all;
