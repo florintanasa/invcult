@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 
 @Table(name = "INVCULT_FARMERS")
 @Entity(name = "invcult_Farmers")
-@NamePattern("%s|denumire")
+@NamePattern("%s %s|denumire,job")
 public class Farmers extends StandardEntity {
     private static final long serialVersionUID = 8962921917719326083L;
 
@@ -23,6 +23,17 @@ public class Farmers extends StandardEntity {
     @NotNull
     @Column(name = "DENUMIRE", nullable = false)
     private String denumire;
+
+    @Column(name = "JOB")
+    private String job;
+
+    public String getJob() {
+        return job;
+    }
+
+    public void setJob(String job) {
+        this.job = job;
+    }
 
     public String getDenumire() {
         return denumire;

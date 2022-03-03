@@ -87,6 +87,7 @@ create table INVCULT_FARMERS (
     --
     ID_TIPPERSOANA_ID uuid not null,
     DENUMIRE varchar(255) not null,
+    JOB varchar(255),
     --
     primary key (ID)
 )^

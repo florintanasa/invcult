@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 
 @Table(name = "INVCULT_LOCALITYSIRUTA")
 @Entity(name = "invcult_Localitysiruta")
-@NamePattern("%s|name")
+@NamePattern("%s %s|name,siruta")
 public class Localitysiruta extends StandardEntity {
     private static final long serialVersionUID = 8700738300850734333L;
 
