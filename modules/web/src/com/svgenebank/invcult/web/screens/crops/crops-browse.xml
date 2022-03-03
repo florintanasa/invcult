@@ -36,9 +36,9 @@
                 <action id="excel" type="excel"/>
             </actions>
             <columns>
-                <column id="denloc"/>
-                <column id="specia"/>
                 <column id="genul"/>
+                <column id="specia"/>
+                <column id="denloc"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"

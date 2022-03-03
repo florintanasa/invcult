@@ -11,7 +11,8 @@ public class InvcultWebTestContainer extends TestContainer {
         appComponents = Arrays.asList(
                 "com.haulmont.cuba",
                 "ro.infoexpert.cuba.translationro",
-                "com.haulmont.addon.helium");
+                "com.haulmont.addon.helium",
+                "com.haulmont.reports");
         appPropertiesFiles = Arrays.asList(
                 // List the files defined in your web.xml
                 // in appPropertiesConfig context parameter of the web module

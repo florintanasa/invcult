@@ -38,6 +38,7 @@ dependencies {
     appComponent("com.haulmont.cuba:cuba-global:$cubaVersion")
     appComponent('ro.infoexpert.cuba.translationro:translationro-global:7.2.1')
     appComponent('com.haulmont.addon.helium:helium-global:0.4.0')
+    appComponent("com.haulmont.reports:reports-global:$cubaVersion")
 }
 
 def postgres = 'org.postgresql:postgresql:42.2.9'
