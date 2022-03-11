@@ -3,9 +3,11 @@ package com.svgenebank.invcult.entity;
 import com.haulmont.chile.core.annotations.Composition;
 import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
+import com.haulmont.cuba.core.entity.annotation.Listeners;
 import com.haulmont.cuba.core.entity.annotation.Lookup;
 import com.haulmont.cuba.core.entity.annotation.LookupType;
 import com.haulmont.cuba.core.entity.annotation.OnDelete;
+import com.haulmont.cuba.core.entity.annotation.PublishEntityChangedEvents;
 import com.haulmont.cuba.core.global.DeletePolicy;
 
 import javax.persistence.*;
@@ -13,6 +15,8 @@ import javax.validation.constraints.NotNull;
 import java.util.Date;
 import java.util.Set;
 
+@PublishEntityChangedEvents
+@Listeners("invcult_InventoryEntityListener")
 @Table(name = "INVCULT_INVENTORY")
 @Entity(name = "invcult_Inventory")
 @NamePattern("%s|nrinv")
@@ -30,7 +34,7 @@ public class Inventory extends StandardEntity {
     @JoinColumn(name = "ID_PERSONS_ID")
     private Persons idPersons;
 
-    @Column(name = "NRINV", unique = true, length = 50)
+    @Column(name = "NRINV", nullable = false, unique = true, length = 50)
     private String nrinv;
 
     @Lookup(type = LookupType.DROPDOWN, actions = {"lookup", "open", "clear"})

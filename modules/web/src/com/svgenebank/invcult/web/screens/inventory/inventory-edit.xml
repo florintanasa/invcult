@@ -114,7 +114,7 @@
                             <action id="clear" type="picker_clear"/>
                         </actions>
                     </lookupPickerField>
-                    <textField id="nrinvField" property="nrinv"/>
+                    <textField id="nrinvField" property="nrinv" editable="false"/>
                     <lookupPickerField id="idLocinvField" optionsContainer="idLocinvsDc" property="idLocinv">
                         <actions>
                             <action id="lookup" type="picker_lookup"/>
