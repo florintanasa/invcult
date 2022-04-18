@@ -166,6 +166,7 @@ create table INVCULT_CROPS (
     DENLOC varchar(50) not null,
     SPECIA varchar(50) not null,
     GENUL varchar(50) not null,
+    FAMILIA varchar(50),
     --
     primary key (ID)
 )^

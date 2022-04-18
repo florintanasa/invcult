@@ -15,9 +15,10 @@
     <layout expand="editActions" spacing="true">
         <form id="form" dataContainer="cropsDc">
             <column width="350px">
-                <textField id="denlocField" property="denloc"/>
-                <textField id="speciaField" property="specia"/>
+                <textField id="familiaField" property="familia"/>
                 <textField id="genulField" property="genul"/>
+                <textField id="speciaField" property="specia"/>
+                <textField id="denlocField" property="denloc"/>
             </column>
         </form>
         <hbox id="editActions" spacing="true">

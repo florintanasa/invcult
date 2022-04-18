@@ -36,6 +36,7 @@
                 <action id="excel" type="excel"/>
             </actions>
             <columns>
+                <column id="familia"/>
                 <column id="genul"/>
                 <column id="specia"/>
                 <column id="denloc"/>

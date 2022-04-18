@@ -26,6 +26,9 @@ public class Crops extends StandardEntity {
     @Column(name = "GENUL", nullable = false, length = 50)
     private String genul;
 
+    @Column(name = "FAMILIA", nullable = true, length = 50)
+    private String familia;
+
     public String getGenul() {
         return genul;
     }
@@ -49,4 +52,8 @@ public class Crops extends StandardEntity {
     public void setDenloc(String denloc) {
         this.denloc = denloc;
     }
+
+    public String getFamilia() {return familia;}
+
+    public void setFamilia(String familia) {this.familia = familia; }
 }
