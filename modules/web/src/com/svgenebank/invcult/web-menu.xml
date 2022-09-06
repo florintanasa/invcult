@@ -5,6 +5,7 @@
         <item screen="invcult_Location.browse" caption="mainMsg://menu_config.invcult_Location.browse"/>
         <item screen="invcult_Persons.browse" caption="mainMsg://menu_config.invcult_Persons.browse"/>
         <item screen="invcult_Inventory.browse" caption="mainMsg://menu_config.invcult_Inventory.browse"/>
+        <item screen="invcult_MapScreen" caption="mainMsg://menu_config.invcult_MapScreen"/>
     </menu>
     <menu id="setting-invcult" caption="mainMsg://menu_config.setting-invcult" insertBefore="administration">
         <menu id="administrativ-invcult" caption="mainMsg://menu_config.administrativ-invcult">

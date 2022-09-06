@@ -21,7 +21,8 @@
     </data>
     <dialogMode height="600"
                 width="800"/>
-    <layout expand="editActions" spacing="true">
+    <layout expand="mapContainer" spacing="true">
+        <vbox id="mapContainer" width="100%"/>
         <form id="form" dataContainer="localitysirutaDc">
             <column width="350px">
                 <textField id="sirutaField" property="siruta"/>
