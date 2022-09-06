@@ -9,7 +9,9 @@ import com.haulmont.cuba.web.gui.components.WebComponentsHelper;
 import com.vaadin.ui.Layout;
 import com.vaadin.server.Resource;
 import com.vaadin.ui.Component;
+import org.vaadin.addon.leaflet.LLayerGroup;
 import org.vaadin.addon.leaflet.LMap;
+import org.vaadin.addon.leaflet.LMarker;
 import org.vaadin.addon.leaflet.LOpenStreetMapLayer;
 import org.vaadin.addon.leaflet.shared.Point;
 
@@ -23,6 +25,7 @@ public class MapScreen extends Screen {
     private static final double ZOOM_LEVEL =7.0;
 
     private LMap map;
+    private LLayerGroup localityMarkers;
 
     @Inject
     private VBoxLayout mapContainer;
@@ -30,7 +33,9 @@ public class MapScreen extends Screen {
     @Subscribe
     protected void onInit(InitEvent event) {
         initMap();
+        drawLocalityMarkers();
         addMapToContainer();
+
     }
 
     private void initMap() {
@@ -43,5 +48,13 @@ public class MapScreen extends Screen {
     private void addMapToContainer() {
         Layout layout = (Layout) WebComponentsHelper.unwrap(mapContainer);
         layout.addComponent(map);
+    }
+
+    private void drawLocalityMarkers() {
+        Point localityLocation = new Point(DEFAULT_LATITUDE, DEFAULT_LONGITUDE);
+        LMarker localityMarker = new LMarker(localityLocation);
+        localityMarkers = new LLayerGroup();
+        localityMarkers.addComponent(localityMarker);
+        map.addComponent(localityMarkers);
     }
 }
