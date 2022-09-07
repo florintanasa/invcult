@@ -9,10 +9,8 @@ import com.haulmont.cuba.web.gui.components.WebComponentsHelper;
 import com.vaadin.ui.Layout;
 import com.vaadin.server.Resource;
 import com.vaadin.ui.Component;
-import org.vaadin.addon.leaflet.LLayerGroup;
-import org.vaadin.addon.leaflet.LMap;
-import org.vaadin.addon.leaflet.LMarker;
-import org.vaadin.addon.leaflet.LOpenStreetMapLayer;
+import com.vaadin.ui.Notification;
+import org.vaadin.addon.leaflet.*;
 import org.vaadin.addon.leaflet.shared.Point;
 
 import javax.inject.Inject;
@@ -53,6 +51,8 @@ public class MapScreen extends Screen {
     private void drawLocalityMarkers() {
         Point localityLocation = new Point(DEFAULT_LATITUDE, DEFAULT_LONGITUDE);
         LMarker localityMarker = new LMarker(localityLocation);
+        localityMarker.setPopup("Punctul de cetrare a hărții");
+        localityMarker.openPopup();
         localityMarkers = new LLayerGroup();
         localityMarkers.addComponent(localityMarker);
         map.addComponent(localityMarkers);
