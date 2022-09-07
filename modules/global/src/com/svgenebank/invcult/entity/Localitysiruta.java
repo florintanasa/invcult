@@ -1,5 +1,6 @@
 package com.svgenebank.invcult.entity;
 
+import com.haulmont.chile.core.annotations.MetaProperty;
 import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 import com.haulmont.cuba.core.entity.annotation.Lookup;
@@ -33,6 +34,14 @@ public class Localitysiruta extends StandardEntity {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "ID_COUNTYSIRUTA_ID")
     private Countysiruta id_countysiruta;
+
+    @Column(name = "LATITUDE")
+    @MetaProperty(datatype = GeoCoordinateDatatype.NAME)
+    private Double latitude;
+
+    @Column(name = "LONGITUDE")
+    @MetaProperty(datatype = GeoCoordinateDatatype.NAME)
+    private Double longitude;
 
     public Countysiruta getId_countysiruta() {
         return id_countysiruta;
@@ -72,5 +81,21 @@ public class Localitysiruta extends StandardEntity {
 
     public void setSiruta(Integer siruta) {
         this.siruta = siruta;
+    }
+
+    public Double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
+
+    public Double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
     }
 }
