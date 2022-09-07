@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <metadata xmlns="http://schemas.haulmont.com/cuba/metadata.xsd">
+    <datatypes>
+        <datatype id="geocoordinate" class="com.svgenebank.invcult.entity.GeoCoordinateDatatype" sqlType="double"/>
+    </datatypes>
 
     <metadata-model root-package="com.svgenebank.invcult" namespace="invcult"/>
 
