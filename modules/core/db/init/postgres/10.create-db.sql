@@ -32,6 +32,8 @@ create table INVCULT_LOCALITYSIRUTA (
     POSTCODE varchar(7),
     SIRUTASUP integer,
     ID_COUNTYSIRUTA_ID uuid not null,
+    LATITUDE double precision,
+    LONGITUDE double precision,
     --
     primary key (ID)
 )^
