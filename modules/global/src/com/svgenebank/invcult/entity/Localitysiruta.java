@@ -43,6 +43,9 @@ public class Localitysiruta extends StandardEntity {
     @MetaProperty(datatype = GeoCoordinateDatatype.NAME)
     private Double longitude;
 
+    @Column(name = "ALTITUDE")
+    private Integer altitude;
+
     public Countysiruta getId_countysiruta() {
         return id_countysiruta;
     }
@@ -97,5 +100,13 @@ public class Localitysiruta extends StandardEntity {
 
     public void setLongitude(Double longitude) {
         this.longitude = longitude;
+    }
+
+    public Integer getAltitude() {
+        return altitude;
+    }
+
+    public void setAltitude(Integer altitude) {
+        this.altitude = altitude;
     }
 }
