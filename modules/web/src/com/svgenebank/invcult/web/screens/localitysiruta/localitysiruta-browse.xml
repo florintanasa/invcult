@@ -41,6 +41,8 @@
                 <column id="postcode"/>
                 <column id="sirutasup"/>
                 <column id="id_countysiruta"/>
+                <column id="latitude"/>
+                <column id="longitude"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
