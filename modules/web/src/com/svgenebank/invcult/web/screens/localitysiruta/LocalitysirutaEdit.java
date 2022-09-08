@@ -30,21 +30,22 @@ public class LocalitysirutaEdit extends StandardEditor<Localitysiruta> {
     @Subscribe
     protected void onInit(InitEvent event) {
         initMap();
-  //      drawLocalityMarkers();
         addMapToContainer();
     }
 
     @Subscribe
     protected void onBeforeShow(BeforeShowEvent event) {
         Localitysiruta localitysiruta = getEditedEntity();
+
         if (localitysiruta.getLatitude() != null && localitysiruta.getLongitude() != null) {
-        Point localityLocation = new Point(localitysiruta.getLatitude(), localitysiruta.getLongitude());
-        LMarker localityMarker = new LMarker(localityLocation);
-        localityMarker.setPopup(localitysiruta.getName());
-        localityMarker.openPopup();
-        localityMarkers = new LLayerGroup();
-        localityMarkers.addComponent(localityMarker);
-        map.addComponent(localityMarkers);
+
+            Point localityLocation = new Point(localitysiruta.getLatitude(), localitysiruta.getLongitude());
+            LMarker localityMarker = new LMarker(localityLocation);
+            localityMarker.setPopup(localitysiruta.getName());
+            localityMarker.openPopup();
+            localityMarkers = new LLayerGroup();
+            localityMarkers.addComponent(localityMarker);
+            map.addComponent(localityMarkers);
         }
         else drawLocalityMarkers();
     }
