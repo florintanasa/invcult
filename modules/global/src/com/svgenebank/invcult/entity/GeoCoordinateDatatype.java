@@ -15,7 +15,7 @@ import java.util.Locale;
 @JavaClass(Double.class)
 public class GeoCoordinateDatatype extends DoubleDatatype {
     public static final String NAME = "geocoordinate";
-    private static final String PATTERN = "#0,000000";
+    private static final String PATTERN = "#0.000000";
 
     public GeoCoordinateDatatype(Element element) {
         super(element);
