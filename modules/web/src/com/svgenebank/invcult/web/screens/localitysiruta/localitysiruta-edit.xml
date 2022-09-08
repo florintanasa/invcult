@@ -39,6 +39,7 @@
                 </lookupPickerField>
                 <textField id="latitudeField" property="latitude"/>
                 <textField id="longitudeField" property="longitude"/>
+                <textField id="altitudeField" property="altitude"/>
             </column>
         </form>
         <hbox id="editActions" spacing="true">

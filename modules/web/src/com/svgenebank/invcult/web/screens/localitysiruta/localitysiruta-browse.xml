@@ -43,6 +43,7 @@
                 <column id="id_countysiruta"/>
                 <column id="latitude"/>
                 <column id="longitude"/>
+                <column id="altitude"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
