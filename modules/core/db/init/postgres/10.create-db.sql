@@ -34,6 +34,7 @@ create table INVCULT_LOCALITYSIRUTA (
     ID_COUNTYSIRUTA_ID uuid not null,
     LATITUDE double precision,
     LONGITUDE double precision,
+    ALTITUDE integer,
     --
     primary key (ID)
 )^
