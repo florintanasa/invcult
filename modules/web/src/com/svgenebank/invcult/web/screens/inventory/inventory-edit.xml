@@ -123,7 +123,9 @@
                         </actions>
                     </lookupPickerField>
                     <textField id="latitudineField" property="latitudine"/>
+                    <textField id="latitudeField" property="latitude"/>
                     <textField id="longitudineField" property="longitudine"/>
+                    <textField id="longitudeField" property="longitude"/>
                     <textField id="alttitudineField" property="alttitudine"/>
                     <lookupPickerField id="idFarmersField" optionsContainer="idFarmersesDc" property="idFarmers">
                         <actions>
