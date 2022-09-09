@@ -1,6 +1,7 @@
 package com.svgenebank.invcult.entity;
 
 import com.haulmont.chile.core.annotations.Composition;
+import com.haulmont.chile.core.annotations.MetaProperty;
 import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 import com.haulmont.cuba.core.entity.annotation.Listeners;
@@ -46,8 +47,16 @@ public class Inventory extends StandardEntity {
     @Column(name = "LATITUDINE", length = 50)
     private String latitudine;
 
+    @Column(name = "LATITUDE")
+    @MetaProperty(datatype = GeoCoordinateDatatype.NAME)
+    private Double latitude;
+
     @Column(name = "LONGITUDINE", length = 50)
     private String longitudine;
+
+    @Column(name = "LONGITUDE")
+    @MetaProperty(datatype = GeoCoordinateDatatype.NAME)
+    private Double longitude;
 
     @Column(name = "ALTTITUDINE")
     private Integer alttitudine;
@@ -366,6 +375,22 @@ public class Inventory extends StandardEntity {
 
     public void setLatitudine(String latitudine) {
         this.latitudine = latitudine;
+    }
+
+    public Double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
+
+    public Double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
     }
 
     public String getNrinv() {
