@@ -1,11 +1,9 @@
 package com.svgenebank.invcult.web.screens.map;
 
 import com.haulmont.cuba.gui.components.VBoxLayout;
-import com.haulmont.cuba.gui.screen.Screen;
-import com.haulmont.cuba.gui.screen.Subscribe;
-import com.haulmont.cuba.gui.screen.UiController;
-import com.haulmont.cuba.gui.screen.UiDescriptor;
+import com.haulmont.cuba.gui.screen.*;
 import com.haulmont.cuba.web.gui.components.WebComponentsHelper;
+import com.svgenebank.invcult.entity.InvcultView;
 import com.vaadin.ui.Layout;
 import com.vaadin.server.Resource;
 import com.vaadin.ui.Component;
@@ -17,7 +15,9 @@ import javax.inject.Inject;
 
 @UiController("invcult_MapScreen")
 @UiDescriptor("map-screen.xml")
-public class MapScreen extends Screen {
+@LookupComponent("invcultViewsTable")
+@LoadDataBeforeShow
+public class MapScreen extends StandardLookup<InvcultView> {
     private static final double DEFAULT_LATITUDE = 46.009628;
     private  static final double DEFAULT_LONGITUDE = 24.456255;
     private static final double ZOOM_LEVEL =7.0;

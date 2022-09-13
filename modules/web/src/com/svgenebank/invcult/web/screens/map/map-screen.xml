@@ -2,7 +2,161 @@
 <window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         caption="msg://mapScreen.caption"
         messagesPack="com.svgenebank.invcult.web.screens">
-    <layout expand="mapContainer" spacing="true">
-        <vbox id="mapContainer" width="100%"/>
+    <data readOnly="true">
+        <collection id="invcultViewsDc"
+                    class="com.svgenebank.invcult.entity.InvcultView"
+                    view="_local">
+            <loader id="invcultViewsDl">
+                <query>
+                    <![CDATA[select e from invcult_InvcultView e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="accordionMain" spacing="true">
+        <accordion id="accordionMain" height="100%">
+            <tab id="mapTab" expand="mapContainer" caption="Harta">
+                <vbox id="mapContainer" spacing="true" width="100%">
+                </vbox>
+            </tab>
+            <tab id="tableTab" expand="invcultViewsTable" caption="Tabel">
+                <filter id="filter"
+                        applyTo="invcultViewsTable"
+                        dataLoader="invcultViewsDl">
+                    <properties include=".*"/>
+                </filter>
+                <groupTable id="invcultViewsTable" width="100%" dataContainer="invcultViewsDc">
+                    <actions>
+                        <action id="refresh" type="refresh"/>
+                        <action id="excel" type="excel"/>
+                    </actions>
+                    <columns>
+                        <column id="dataInventar"/>
+                        <column id="reporter"/>
+                        <column id="nrInventar"/>
+                        <column id="judetInterviu"/>
+                        <column id="sirutaInterviu"/>
+                        <column id="localitateInterviu"/>
+                        <column id="tipPersoan"/>
+                        <column id="fermierul"/>
+                        <column id="meseria"/>
+                        <column id="judetFerma"/>
+                        <column id="sirutaFerma"/>
+                        <column id="localitateFerma"/>
+                        <column id="latitudine"/>
+                        <column id="longitudine"/>
+                        <column id="altitudine"/>
+                        <column id="tipArteraFerma"/>
+                        <column id="stradaFerma"/>
+                        <column id="nrFerma"/>
+                        <column id="blFerma"/>
+                        <column id="scFerma"/>
+                        <column id="etFerma"/>
+                        <column id="apFerma"/>
+                        <column id="cpFerma"/>
+                        <column id="genul"/>
+                        <column id="specia"/>
+                        <column id="denumireLocala"/>
+                        <column id="sistemulAgricol"/>
+                        <column id="cultivaPopulatiiLocale"/>
+                        <column id="vechimeVarietate"/>
+                        <column id="modCultivare"/>
+                        <column id="rotatieCulturi"/>
+                        <column id="fertilizatori"/>
+                        <column id="tratament"/>
+                        <column id="erbicidat"/>
+                        <column id="locUscare"/>
+                        <column id="locPastrare"/>
+                        <column id="formaConservare"/>
+                        <column id="recipientConservare"/>
+                        <column id="comentariu"/>
+                        <column id="traditia"/>
+                        <column id="sigurantaAlimentara"/>
+                        <column id="productivitateaSiCalitatea"/>
+                        <column id="rezistentaLaBoliSiDaunatori"/>
+                        <column id="caracteristicileAgronomice"/>
+                        <column id="comercializarea"/>
+                        <column id="ameliorareaSolului"/>
+                        <column id="rezistentaLaFactoriiDeMediu"/>
+                        <column id="recoltaProprie"/>
+                        <column id="schimbCuVecinii"/>
+                        <column id="barter"/>
+                        <column id="piataLocalaSauRegionala"/>
+                        <column id="materialCertificatMagazineleSpecializate"/>
+                        <column id="bancaDeGene"/>
+                        <column id="productivitatea"/>
+                        <column id="marimeaFructului"/>
+                        <column id="gustul"/>
+                        <column id="culoarea"/>
+                        <column id="forma"/>
+                        <column id="stareaDeSanatate"/>
+                        <column id="uniformitatea"/>
+                        <column id="tulpina"/>
+                        <column id="ramurile"/>
+                        <column id="frunzele"/>
+                        <column id="scoarta"/>
+                        <column id="rizom"/>
+                        <column id="radacina"/>
+                        <column id="tuberculul"/>
+                        <column id="floareaSauInflorescenta"/>
+                        <column id="fructul"/>
+                        <column id="samanta"/>
+                        <column id="rasina"/>
+                        <column id="toataPlanta"/>
+                        <column id="pastai"/>
+                        <column id="tulpinaSiFrunza"/>
+                        <column id="parteaVegetalaAPlantei"/>
+                        <column id="capatana"/>
+                        <column id="consumulPropriuMancare"/>
+                        <column id="furaje"/>
+                        <column id="condiment"/>
+                        <column id="scopMedical"/>
+                        <column id="scopOrnamental"/>
+                        <column id="comercializareaLaPiataLocala"/>
+                        <column id="comercializareaLaPiataRegionala"/>
+                        <column id="schimbDeSeminte"/>
+                        <column id="comercializarePrinIntermediari"/>
+                        <column id="procesare"/>
+                        <column id="pregatireaTerenuluiFemeia"/>
+                        <column id="pregatireaTerenuluiBarbatul"/>
+                        <column id="pregatireaTerenuluiAltiMembri"/>
+                        <column id="pregatireaTerenuluiRudeGrI"/>
+                        <column id="pregatireaTerenuluiToti"/>
+                        <column id="semanatFemeia"/>
+                        <column id="semanatBarbatul"/>
+                        <column id="semanatRudeGrI"/>
+                        <column id="semanatAltiMembri"/>
+                        <column id="semanatToti"/>
+                        <column id="recoltatFemeia"/>
+                        <column id="recoltatBarbatul"/>
+                        <column id="recoltatRudeGrI"/>
+                        <column id="recoltatAltiMembri"/>
+                        <column id="recoltatToti"/>
+                        <column id="conservareFemeia"/>
+                        <column id="conservareBarbatul"/>
+                        <column id="conservareRudeGrI"/>
+                        <column id="conservareAltiMembri"/>
+                        <column id="conservareToti"/>
+                        <column id="intretinereaCulturiiFemeia"/>
+                        <column id="intretinereaCulturiiBarbatul"/>
+                        <column id="intretinereaCulturiiRudeGrI"/>
+                        <column id="intretinereaCulturiiAltiMembri"/>
+                        <column id="intretinereaCulturiiToti"/>
+                    </columns>
+                    <rowsCount/>
+                    <buttonsPanel id="buttonsPanel"
+                    alwaysVisible="true">
+                    <button id="refreshBtn" action="invcultViewsTable.refresh"/>
+                    <button id="excelBtn" action="invcultViewsTable.excel"/>
+                </buttonsPanel>
+                </groupTable>
+                <hbox id="lookupActions" spacing="true" visible="false">
+                    <button action="lookupSelectAction"/>
+                    <button action="lookupCancelAction"/>
+                </hbox>
+            </tab>
+        </accordion>
     </layout>
 </window>
