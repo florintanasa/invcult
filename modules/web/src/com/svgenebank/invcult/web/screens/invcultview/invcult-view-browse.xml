@@ -24,7 +24,7 @@
                 dataLoader="invcultViewsDl">
             <properties include=".*"/>
         </filter>
-        <table id="invcultViewsTable"
+        <groupTable id="invcultViewsTable"
                width="100%"
                dataContainer="invcultViewsDc">
             <actions>
@@ -157,7 +157,7 @@
                 <button id="editBtn" action="invcultViewsTable.edit"/>
                 <button id="removeBtn" action="invcultViewsTable.remove"/>
             </buttonsPanel>
-        </table>
+        </groupTable>
         <hbox id="lookupActions" spacing="true" visible="false">
             <button action="lookupSelectAction"/>
             <button action="lookupCancelAction"/>
