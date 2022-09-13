@@ -28,9 +28,8 @@
                width="100%"
                dataContainer="invcultViewsDc">
             <actions>
-                <action id="create" type="create"/>
-                <action id="edit" type="edit"/>
-                <action id="remove" type="remove"/>
+                <action id="refresh" type="refresh"/>
+                <action id="excel" type="excel"/>
             </actions>
             <columns>
                 <column id="altitudine"/>
@@ -153,9 +152,8 @@
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
-                <button id="createBtn" action="invcultViewsTable.create"/>
-                <button id="editBtn" action="invcultViewsTable.edit"/>
-                <button id="removeBtn" action="invcultViewsTable.remove"/>
+                <button id="refreshBtn" action="invcultViewsTable.refresh"/>
+                <button id="excelBtn" action="invcultViewsTable.excel"/>
             </buttonsPanel>
         </groupTable>
         <hbox id="lookupActions" spacing="true" visible="false">
