@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
+        caption="msg://invcultViewBrowse.caption"
+        focusComponent="invcultViewsTable"
+        messagesPack="com.svgenebank.invcult.web.screens.invcultview">
+    <data readOnly="true">
+        <collection id="invcultViewsDc"
+                    class="com.svgenebank.invcult.entity.InvcultView"
+                    view="_local">
+            <loader id="invcultViewsDl">
+                <query>
+                    <![CDATA[select e from invcult_InvcultView e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="invcultViewsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="invcultViewsTable"
+                dataLoader="invcultViewsDl">
+            <properties include=".*"/>
+        </filter>
+        <table id="invcultViewsTable"
+               width="100%"
+               dataContainer="invcultViewsDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="altitudine"/>
+                <column id="ameliorareaSolului"/>
+                <column id="apFerma"/>
+                <column id="bancaDeGene"/>
+                <column id="barter"/>
+                <column id="blFerma"/>
+                <column id="capatana"/>
+                <column id="caracteristicileAgronomice"/>
+                <column id="comentariu"/>
+                <column id="comercializarePrinIntermediari"/>
+                <column id="comercializarea"/>
+                <column id="comercializareaLaPiataLocala"/>
+                <column id="comercializareaLaPiataRegionala"/>
+                <column id="condiment"/>
+                <column id="conservareAltiMembri"/>
+                <column id="conservareBarbatul"/>
+                <column id="conservareFemeia"/>
+                <column id="conservareRudeGrI"/>
+                <column id="conservareToti"/>
+                <column id="consumulPropriuMancare"/>
+                <column id="cpFerma"/>
+                <column id="culoarea"/>
+                <column id="cultivaPopulatiiLocale"/>
+                <column id="dataInventar"/>
+                <column id="denumireLocala"/>
+                <column id="erbicidat"/>
+                <column id="etFerma"/>
+                <column id="fermierul"/>
+                <column id="fertilizatori"/>
+                <column id="floareaSauInflorescenta"/>
+                <column id="forma"/>
+                <column id="formaConservare"/>
+                <column id="fructul"/>
+                <column id="frunzele"/>
+                <column id="furaje"/>
+                <column id="genul"/>
+                <column id="gustul"/>
+                <column id="intretinereaCulturiiAltiMembri"/>
+                <column id="intretinereaCulturiiBarbatul"/>
+                <column id="intretinereaCulturiiFemeia"/>
+                <column id="intretinereaCulturiiRudeGrI"/>
+                <column id="intretinereaCulturiiToti"/>
+                <column id="judetFerma"/>
+                <column id="judetInterviu"/>
+                <column id="latitudine"/>
+                <column id="locPastrare"/>
+                <column id="locUscare"/>
+                <column id="localitateFerma"/>
+                <column id="localitateInterviu"/>
+                <column id="longitudine"/>
+                <column id="marimeaFructului"/>
+                <column id="materialCertificatMagazineleSpecializate"/>
+                <column id="meseria"/>
+                <column id="modCultivare"/>
+                <column id="nrFerma"/>
+                <column id="nrInventar"/>
+                <column id="parteaVegetalaAPlantei"/>
+                <column id="pastai"/>
+                <column id="piataLocalaSauRegionala"/>
+                <column id="pregatireaTerenuluiAltiMembri"/>
+                <column id="pregatireaTerenuluiBarbatul"/>
+                <column id="pregatireaTerenuluiFemeia"/>
+                <column id="pregatireaTerenuluiRudeGrI"/>
+                <column id="pregatireaTerenuluiToti"/>
+                <column id="procesare"/>
+                <column id="procesareAltiMembri"/>
+                <column id="procesareBarbatul"/>
+                <column id="procesareFemeia"/>
+                <column id="procesareRudeGrI"/>
+                <column id="procesareToti"/>
+                <column id="productivitatea"/>
+                <column id="productivitateaSiCalitatea"/>
+                <column id="radacina"/>
+                <column id="ramurile"/>
+                <column id="rasina"/>
+                <column id="recipientConservare"/>
+                <column id="recoltaProprie"/>
+                <column id="recoltatAltiMembri"/>
+                <column id="recoltatBarbatul"/>
+                <column id="recoltatFemeia"/>
+                <column id="recoltatRudeGrI"/>
+                <column id="recoltatToti"/>
+                <column id="reporter"/>
+                <column id="rezistentaLaBoliSiDaunatori"/>
+                <column id="rezistentaLaFactoriiDeMediu"/>
+                <column id="rizom"/>
+                <column id="rotatieCulturi"/>
+                <column id="samanta"/>
+                <column id="scFerma"/>
+                <column id="schimbCuVecinii"/>
+                <column id="schimbDeSeminte"/>
+                <column id="scoarta"/>
+                <column id="scopMedical"/>
+                <column id="scopOrnamental"/>
+                <column id="semanatAltiMembri"/>
+                <column id="semanatBarbatul"/>
+                <column id="semanatFemeia"/>
+                <column id="semanatRudeGrI"/>
+                <column id="semanatToti"/>
+                <column id="sigurantaAlimentara"/>
+                <column id="sirutaFerma"/>
+                <column id="sirutaInterviu"/>
+                <column id="sistemulAgricol"/>
+                <column id="specia"/>
+                <column id="stareaDeSanatate"/>
+                <column id="stradaFerma"/>
+                <column id="tipArteraFerma"/>
+                <column id="tipPersoan"/>
+                <column id="toataPlanta"/>
+                <column id="traditia"/>
+                <column id="tratament"/>
+                <column id="tuberculul"/>
+                <column id="tulpina"/>
+                <column id="tulpinaSiFrunza"/>
+                <column id="uniformitatea"/>
+                <column id="vechimeVarietate"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="invcultViewsTable.create"/>
+                <button id="editBtn" action="invcultViewsTable.edit"/>
+                <button id="removeBtn" action="invcultViewsTable.remove"/>
+            </buttonsPanel>
+        </table>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

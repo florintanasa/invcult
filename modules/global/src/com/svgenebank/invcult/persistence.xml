@@ -27,5 +27,6 @@
         <class>com.svgenebank.invcult.entity.Presform</class>
         <class>com.svgenebank.invcult.entity.Typeworkdiv</class>
         <class>com.svgenebank.invcult.entity.Workdivision</class>
+        <class>com.svgenebank.invcult.entity.InvcultView</class>
     </persistence-unit>
 </persistence>
