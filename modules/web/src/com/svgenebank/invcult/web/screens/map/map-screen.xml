@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         caption="msg://mapScreen.caption"
-        messagesPack="com.svgenebank.invcult.web.screens">
+        messagesPack="com.svgenebank.invcult.web.screens.map">
     <data readOnly="true">
         <collection id="invcultViewsDc"
                     class="com.svgenebank.invcult.entity.InvcultView"
@@ -16,8 +16,8 @@
     <dialogMode height="600"
                 width="800"/>
     <layout expand="accordionMain" spacing="true">
-        <accordion id="accordionMain" height="100%">
-            <tab id="tableTab" expand="invcultViewsTable" caption="Tabel">
+        <accordion id="accordionMain">
+            <tab id="tableTab" expand="invcultViewsTable" caption="msg://tableTab.caption">
                 <filter id="filter"
                         applyTo="invcultViewsTable"
                         dataLoader="invcultViewsDl">
@@ -153,10 +153,10 @@
                     <button action="lookupCancelAction"/>
                 </hbox>
             </tab>
-            <tab id="mapTab" expand="mapContainer" caption="Harta">
+            <tab id="mapTab" expand="mapContainer" caption="msg://mapTab.caption">
                 <hbox spacing="true" align="MIDDLE_CENTER" width="100%">
                     <button id="showOnMap"
-                            caption="Vezi pe hartă"
+                            caption="msg://showOnMapBtn.caption"
                             invoke="drawLocalityMarkers"
                             width="100%"/>
                 </hbox>
