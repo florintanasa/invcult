@@ -17,10 +17,6 @@
                 width="800"/>
     <layout expand="accordionMain" spacing="true">
         <accordion id="accordionMain" height="100%">
-            <tab id="mapTab" expand="mapContainer" caption="Harta">
-                <vbox id="mapContainer" spacing="true" width="100%">
-                </vbox>
-            </tab>
             <tab id="tableTab" expand="invcultViewsTable" caption="Tabel">
                 <filter id="filter"
                         applyTo="invcultViewsTable"
@@ -156,6 +152,15 @@
                     <button action="lookupSelectAction"/>
                     <button action="lookupCancelAction"/>
                 </hbox>
+            </tab>
+            <tab id="mapTab" expand="mapContainer" caption="Harta">
+                <hbox spacing="true" align="MIDDLE_CENTER" width="100%">
+                    <button id="showOnMap"
+                            caption="Vezi pe hartă"
+                            invoke="drawLocalityMarkers"
+                            width="100%"/>
+                </hbox>
+                <vbox id="mapContainer" spacing="true" width="100%"/>
             </tab>
         </accordion>
     </layout>
