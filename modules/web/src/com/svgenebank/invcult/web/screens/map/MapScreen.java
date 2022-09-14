@@ -30,6 +30,10 @@ public class MapScreen extends StandardLookup<InvcultView> {
     private LMap map;
     private LLayerGroup localityMarkers;
     private PopupState popupState;
+    private Point iconSize;
+    private Point iconAnchor;
+    private Point popupAnchor;
+
     @Inject
     private VBoxLayout mapContainer;
     @Inject
@@ -37,12 +41,11 @@ public class MapScreen extends StandardLookup<InvcultView> {
     @Inject
     private Button showOnMap;
 
-
-
     @Subscribe
     protected void onInit(InitEvent event) {
         localityMarkers = new LLayerGroup();
         popupState = createPopupState();
+
         initMap();
  //       drawCenterMark();
         addMapToContainer();
@@ -76,7 +79,7 @@ public class MapScreen extends StandardLookup<InvcultView> {
     private void drawCenterMark() {
         Point centerMap = new Point(DEFAULT_LATITUDE,DEFAULT_LONGITUDE);
         LMarker centerMarker = new LMarker(centerMap);
-        centerMarker.setPopup("Punctul de centrare a hărții");
+        centerMarker.setPopup("Punctul de centrare al hărții");
         centerMarker.openPopup();
         centerMarker.setPopupState(popupState);
         map.addComponent(centerMarker);
@@ -112,7 +115,7 @@ public class MapScreen extends StandardLookup<InvcultView> {
 
     /**
      * Creates marker for the passed to the method InvcultView.
-     * Sets popup ?
+     * Sets popup for locality name where is Ferma
      *
      * @param locality InvcultView passed to the method
      * @return Localities marker that represents it's location
@@ -120,6 +123,19 @@ public class MapScreen extends StandardLookup<InvcultView> {
     private LMarker createLocalityMarker(InvcultView locality) {
         Point localityLocation = new Point(locality.getLatitudine(), locality.getLongitudine());
         LMarker localityMarker = new LMarker(localityLocation);
+
+        String iconString = "BG";
+
+        iconSize = new Point(35, 35);
+        iconAnchor = new Point(15, 15);
+        popupAnchor = new Point(0, -15);
+
+        localityMarker.setIconSize(iconSize);
+        localityMarker.setIconAnchor(iconAnchor);
+        localityMarker.setPopupAnchor(popupAnchor);
+
+        localityMarker.setIcon(iconString);
+
         localityMarker.setPopup(locality.getLocalitateFerma());
         localityMarker.openPopup();
         localityMarker.setPopupState(popupState);
