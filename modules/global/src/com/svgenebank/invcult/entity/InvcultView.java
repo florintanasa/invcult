@@ -18,6 +18,8 @@ public class InvcultView extends BaseUuidEntity {
     private Integer altitudine;
     @Column(name = "ameliorarea_solului")
     private Long ameliorareaSolului;
+    @Column(name = "autoinsamantare")
+    private Long autoinsamantare;
     @Column(name = "ap_ferma", length = 10)
     private String apFerma;
     @Column(name = "banca_de_gene")
@@ -64,12 +66,16 @@ public class InvcultView extends BaseUuidEntity {
     @Temporal(TemporalType.DATE)
     @Column(name = "data_inventar")
     private Date dataInventar;
+    @Column(name = "de_la_parinti_si_bunici")
+    private Long deLaParintiSiBunici;
     @Column(name = "denumire_locala", length = 50)
     private String denumireLocala;
     @Column(name = "erbicidat")
     private Boolean erbicidat;
     @Column(name = "et_ferma", length = 10)
     private String etFerma;
+    @Column(name = "fara_criterii_de_selectie")
+    private Long faraCriteriiDeSelectie;
     @Column(name = "fermierul")
     private String fermierul;
     @Column(name = "fertilizatori")
@@ -90,6 +96,8 @@ public class InvcultView extends BaseUuidEntity {
     private String genul;
     @Column(name = "gustul")
     private Long gustul;
+    @Column(name = "inflorescenta")
+    private Long inflorescenta;
     @Column(name = "intretinerea_culturii_alti_membri")
     private Long intretinereaCulturiiAltiMembri;
     @Column(name = "intretinerea_culturii_barbatul")
@@ -134,6 +142,8 @@ public class InvcultView extends BaseUuidEntity {
     private Long pastai;
     @Column(name = "piata_locala_sau_regionala")
     private Long piataLocalaSauRegionala;
+    @Column(name = "planta_intreaga_mai_putin_radacina")
+    private Long plantaIntreagaMaiPutinRadacina;
     @Column(name = "pregatirea_terenului_alti_membri")
     private Long pregatireaTerenuluiAltiMembri;
     @Column(name = "pregatirea_terenului_barbatul")
@@ -160,6 +170,8 @@ public class InvcultView extends BaseUuidEntity {
     private Long productivitatea;
     @Column(name = "productivitatea_si_calitatea")
     private Long productivitateaSiCalitatea;
+    @Column(name = "proprietatile_medicinale_ale_plantei")
+    private Long proprietatileMedicinaleAlePlantei;
     @Column(name = "radacina")
     private Long radacina;
     @Column(name = "ramurile")
@@ -1175,5 +1187,53 @@ public class InvcultView extends BaseUuidEntity {
 
     public void setAltitudine(Integer altitudine) {
         this.altitudine = altitudine;
+    }
+
+    public Long getAutoinsamantare() {
+        return autoinsamantare;
+    }
+
+    public void setAutoinsamantare(Long autoinsamantare) {
+        this.autoinsamantare = autoinsamantare;
+    }
+
+    public Long getDeLaParintiSiBunici() {
+        return deLaParintiSiBunici;
+    }
+
+    public void setDeLaParintiSiBunici(Long deLaParintiSiBunici) {
+        this.deLaParintiSiBunici = deLaParintiSiBunici;
+    }
+
+    public Long getFaraCriteriiDeSelectie() {
+        return faraCriteriiDeSelectie;
+    }
+
+    public void setFaraCriteriiDeSelectie(Long faraCriteriiDeSelectie) {
+        this.faraCriteriiDeSelectie = faraCriteriiDeSelectie;
+    }
+
+    public Long getInflorescenta() {
+        return inflorescenta;
+    }
+
+    public void setInflorescenta(Long inflorescenta) {
+        this.inflorescenta = inflorescenta;
+    }
+
+    public Long getPlantaIntreagaMaiPutinRadacina() {
+        return plantaIntreagaMaiPutinRadacina;
+    }
+
+    public void setPlantaIntreagaMaiPutinRadacina(Long plantaIntreagaMaiPutinRadacina) {
+        this.plantaIntreagaMaiPutinRadacina = plantaIntreagaMaiPutinRadacina;
+    }
+
+    public Long getProprietatileMedicinaleAlePlantei() {
+        return proprietatileMedicinaleAlePlantei;
+    }
+
+    public void setProprietatileMedicinaleAlePlantei(Long proprietatileMedicinaleAlePlantei) {
+        this.proprietatileMedicinaleAlePlantei = proprietatileMedicinaleAlePlantei;
     }
 }

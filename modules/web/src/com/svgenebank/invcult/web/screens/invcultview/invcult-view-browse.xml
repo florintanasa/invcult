@@ -79,12 +79,15 @@
                 <column id="comercializarea"/>
                 <column id="ameliorareaSolului"/>
                 <column id="rezistentaLaFactoriiDeMediu"/>
+                <column id="proprietatileMedicinaleAlePlantei"/>
                 <column id="recoltaProprie"/>
                 <column id="schimbCuVecinii"/>
                 <column id="barter"/>
                 <column id="piataLocalaSauRegionala"/>
                 <column id="materialCertificatMagazineleSpecializate"/>
                 <column id="bancaDeGene"/>
+                <column id="deLaParintiSiBunici"/>
+                <column id="autoinsamantare"/>
                 <column id="productivitatea"/>
                 <column id="marimeaFructului"/>
                 <column id="gustul"/>
@@ -92,6 +95,7 @@
                 <column id="forma"/>
                 <column id="stareaDeSanatate"/>
                 <column id="uniformitatea"/>
+                <column id="faraCriteriiDeSelectie"/>
                 <column id="tulpina"/>
                 <column id="ramurile"/>
                 <column id="frunzele"/>
@@ -108,6 +112,8 @@
                 <column id="tulpinaSiFrunza"/>
                 <column id="parteaVegetalaAPlantei"/>
                 <column id="capatana"/>
+                <column id="plantaIntreagaMaiPutinRadacina"/>
+                <column id="inflorescenta"/>
                 <column id="consumulPropriuMancare"/>
                 <column id="furaje"/>
                 <column id="condiment"/>
@@ -118,6 +124,11 @@
                 <column id="schimbDeSeminte"/>
                 <column id="comercializarePrinIntermediari"/>
                 <column id="procesare"/>
+                <column id="procesareFemeia"/>
+                <column id="procesareBarbatul"/>
+                <column id="procesareRudeGrI"/>
+                <column id="procesareAltiMembri"/>
+                <column id="procesareToti"/>
                 <column id="pregatireaTerenuluiFemeia"/>
                 <column id="pregatireaTerenuluiBarbatul"/>
                 <column id="pregatireaTerenuluiAltiMembri"/>
