@@ -16,7 +16,7 @@
                 </query>
             </loader>
         </collection>
-        <collection id="idLocalirysirutasDc" class="com.svgenebank.invcult.entity.Localitysiruta" view="_minimal">
+        <collection id="idLocalirysirutasDc" class="com.svgenebank.invcult.entity.Localitysiruta" view="_local">
             <loader id="idLocalirysirutasDl">
                 <query>
                     <![CDATA[select e from invcult_Localitysiruta e]]>
