@@ -40,9 +40,7 @@
                 <column id="idPersons"/>
                 <column id="nrinv"/>
                 <column id="idLocinv"/>
-                <column id="latitudine"/>
                 <column id="latitude"/>
-                <column id="longitudine"/>
                 <column id="longitude"/>
                 <column id="alttitudine"/>
                 <column id="idFarmers"/>

@@ -44,15 +44,15 @@ public class Inventory extends StandardEntity {
     @NotNull
     private Localitysiruta idLocinv;
 
-    @Column(name = "LATITUDINE", length = 50)
-    private String latitudine;
+ //   @Column(name = "LATITUDINE", length = 50)
+ //   private String latitudine;
 
     @Column(name = "LATITUDE")
     @MetaProperty(datatype = GeoCoordinateDatatype.NAME)
     private Double latitude;
 
-    @Column(name = "LONGITUDINE", length = 50)
-    private String longitudine;
+//    @Column(name = "LONGITUDINE", length = 50)
+//    private String longitudine;
 
     @Column(name = "LONGITUDE")
     @MetaProperty(datatype = GeoCoordinateDatatype.NAME)
@@ -361,21 +361,21 @@ public class Inventory extends StandardEntity {
         this.idFarmers = idFarmers;
     }
 
-    public String getLongitudine() {
-        return longitudine;
-    }
+ //   public String getLongitudine() {
+//        return longitudine;
+//    }
 
-    public void setLongitudine(String longitudine) {
-        this.longitudine = longitudine;
-    }
+ //   public void setLongitudine(String longitudine) {
+ //       this.longitudine = longitudine;
+ //   }
 
-    public String getLatitudine() {
-        return latitudine;
-    }
+ //   public String getLatitudine() {
+ //       return latitudine;
+ //   }
 
-    public void setLatitudine(String latitudine) {
-        this.latitudine = latitudine;
-    }
+ //   public void setLatitudine(String latitudine) {
+ //       this.latitudine = latitudine;
+ //   }
 
     public Double getLatitude() {
         return latitude;
