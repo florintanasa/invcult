@@ -3,7 +3,6 @@
     <menu id="application-invcult" insertBefore="administration" caption="mainMsg://menu_config.application-invcult">
         <item screen="invcult_Farmers.browse" caption="mainMsg://menu_config.invcult_Farmers.browse"/>
         <item screen="invcult_Location.browse" caption="mainMsg://menu_config.invcult_Location.browse"/>
-        <item screen="invcult_Persons.browse" caption="mainMsg://menu_config.invcult_Persons.browse"/>
         <item screen="invcult_Inventory.browse" caption="mainMsg://menu_config.invcult_Inventory.browse"/>
         <item screen="invcult_MapScreen" caption="mainMsg://menu_config.invcult_MapScreen"/>
         <item screen="invcult_InvcultView.browse" caption="mainMsg://menu_config.invcult_InvcultView.browse"/>
@@ -16,6 +15,7 @@
             <item screen="invcult_Roadtype.browse" caption="mainMsg://menu_config.invcult_Roadtype.browse"/>
             <item screen="invcult_Street.browse" caption="mainMsg://menu_config.invcult_Street.browse"/>
             <item screen="invcult_Tippersoana.browse" caption="mainMsg://menu_config.invcult_Tippersoana.browse"/>
+            <item screen="invcult_Persons.browse" caption="mainMsg://menu_config.invcult_Persons.browse"/>
         </menu>
         <menu id="technological-invcult" caption="mainMsg://menu_config.technological-invcult">
             <item screen="invcult_Crops.browse" caption="mainMsg://menu_config.invcult_Crops.browse"/>
