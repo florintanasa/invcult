@@ -22,7 +22,7 @@
                 </query>
             </loader>
         </collection>
-        <collection id="idLocinvsDc" class="com.svgenebank.invcult.entity.Localitysiruta" view="_minimal">
+        <collection id="idLocinvsDc" class="com.svgenebank.invcult.entity.Localitysiruta" view="_local">
             <loader id="idLocinvsDl">
                 <query>
                     <![CDATA[select e from invcult_Localitysiruta e]]>
@@ -122,9 +122,7 @@
                             <action id="clear" type="picker_clear"/>
                         </actions>
                     </lookupPickerField>
-                    <textField id="latitudineField" property="latitudine"/>
                     <textField id="latitudeField" property="latitude"/>
-                    <textField id="longitudineField" property="longitudine"/>
                     <textField id="longitudeField" property="longitude"/>
                     <textField id="alttitudineField" property="alttitudine"/>
                     <lookupPickerField id="idFarmersField" optionsContainer="idFarmersesDc" property="idFarmers">
