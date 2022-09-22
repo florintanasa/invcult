@@ -9,7 +9,7 @@ Pentru a lucra la acest proiect va trebui, ca initial, să avem instalat:
 
 Cu ajutorul clientului git vom clona proiectul utlizând comanda:
 
-`git clone https://Tanasa_Florin@bitbucket.org/svgenebank/invcult.git`
+`git clone https://github.com/florintanasa/invcult.git`
 
 Proiectul în urma clonării va fi importat în IntelliJ Idea.
 
