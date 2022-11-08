@@ -39,7 +39,7 @@
         <collection id="idLocfermasDc" class="com.svgenebank.invcult.entity.Location" view="_minimal">
             <loader id="idLocfermasDl">
                 <query>
-                    <![CDATA[select e from invcult_Location e]]>
+                    <![CDATA[select e from invcult_Location e where e.idFarmers = :container_idFarmersesDc]]>
                 </query>
             </loader>
         </collection>
@@ -102,6 +102,11 @@
     </data>
     <dialogMode height="600"
                 width="800"/>
+    <facets>
+        <dataLoadCoordinator auto="true">
+            <refresh loader="idFarmersesDl" onScreenEvent="Init"/>
+        </dataLoadCoordinator>
+    </facets>
     <layout expand="scrollBox" spacing="true">
         <scrollBox id="scrollBox" spacing="true">
             <form id="form" dataContainer="inventoryDc">
