@@ -17,7 +17,7 @@ Proiectul în urma clonării va fi importat în IntelliJ Idea.
 > File->New->Project from Vesrion Control...  
   
 > Atenție:  Proiectul este configurat pentru PostgreSQL. Din meniul Cuba->Main data store settings-> puteți schimba credențialele la PostgresSQL conform cu serverul vostru sau puteți alege alt DBMS ca de exemplu HSQLDB 
-> De asemenea, ecranul Harta face referire la o entitate ce este conecatată la un view in PostgresSQL, ce va trebui creat, dar harta din ecranul Localități este utilizabilă.
+> De asemenea, ecranul Harta face referire la o entitate ce este conecatată la un view in PostgresSQL, ce va trebui creat ulterior (voi reveni), dar harta din ecranul Localități este utilizabilă.
 
 Pentru hartă am folosit componenta v-leaflet de la https://vaadin.com/directory/component/v-leaflet
 
@@ -42,6 +42,6 @@ The project after cloning will be imported into IntelliJ Idea.
 > File->New->Project from Vesrion Control...
   
 > Attention: The project is configured for PostgreSQL. From the menu Cuba->Main data store settings-> you can change the credentials to PostgresSQL according to your server or you can choose another DBMS such as HSQLDB
-> Also the Map screen refers to an entity that is connected to a view in PostgresSQL, this need made manualy in PostgreSQL, but the map in the Locality screen is usable.
+> Also the Map screen refers to an entity that is connected to a view in PostgresSQL, this need made manualy in PostgreSQL (I'll come back), but the map in the Locality screen is usable.
 
 For the map I used the v-leaflet component from https://vaadin.com/directory/component/v-leaflet
