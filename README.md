@@ -21,7 +21,7 @@ Proiectul în urma clonării va fi importat în IntelliJ Idea.
 
 Pentru hartă am folosit componenta v-leaflet de la https://vaadin.com/directory/component/v-leaflet
 
-
+![Screenshoot](/img/Screenshot_invcult_locality.png)
 
 # Crop inventory
 ## Installation
