@@ -40,11 +40,11 @@
                 <column id="idPersons"/>
                 <column id="nrinv"/>
                 <column id="idLocinv"/>
+                <column id="idFarmers"/>
+                <column id="idLocferma.idLocalirysiruta"/>
                 <column id="latitude"/>
                 <column id="longitude"/>
                 <column id="alttitudine"/>
-                <column id="idFarmers"/>
-                <column id="idLocferma"/>
                 <column id="idCrops"/>
                 <column id="idSysagr"/>
                 <column id="islocpop"/>
