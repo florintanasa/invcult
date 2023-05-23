@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 
 @Table(name = "INVCULT_LOCATION")
 @Entity(name = "invcult_Location")
-@NamePattern("%s %s %s|idFarmers,idStreet,numar")
+@NamePattern("%s %s %s|idLocalirysiruta,idStreet,numar")
 public class Location extends StandardEntity {
     private static final long serialVersionUID = 4764595626878304243L;
 
