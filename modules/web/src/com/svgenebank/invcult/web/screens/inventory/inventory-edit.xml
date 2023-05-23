@@ -127,9 +127,6 @@
                             <action id="clear" type="picker_clear"/>
                         </actions>
                     </lookupPickerField>
-                    <textField id="latitudeField" property="latitude"/>
-                    <textField id="longitudeField" property="longitude"/>
-                    <textField id="alttitudineField" property="alttitudine"/>
                     <lookupPickerField id="idFarmersField" optionsContainer="idFarmersesDc" property="idFarmers">
                         <actions>
                             <action id="lookup" type="picker_lookup"/>
@@ -144,6 +141,9 @@
                             <action id="clear" type="picker_clear"/>
                         </actions>
                     </lookupPickerField>
+                    <textField id="latitudeField" property="latitude"/>
+                    <textField id="longitudeField" property="longitude"/>
+                    <textField id="alttitudineField" property="alttitudine"/>
                     <lookupPickerField id="idCropsField" optionsContainer="idCropsesDc" property="idCrops">
                         <actions>
                             <action id="lookup" type="picker_lookup"/>
