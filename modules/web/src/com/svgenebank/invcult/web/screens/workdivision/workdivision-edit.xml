@@ -12,7 +12,7 @@
         <collection id="idTypeworkdivsDc" class="com.svgenebank.invcult.entity.Typeworkdiv" view="_minimal">
             <loader id="idTypeworkdivsDl">
                 <query>
-                    <![CDATA[select e from invcult_Typeworkdiv e]]>
+                    <![CDATA[select e from invcult_Typeworkdiv e order by e.name]]>
                 </query>
             </loader>
         </collection>
