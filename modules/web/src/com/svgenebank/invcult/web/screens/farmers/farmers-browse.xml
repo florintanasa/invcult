@@ -38,6 +38,7 @@
             <columns>
                 <column id="idTippersoana"/>
                 <column id="denumire"/>
+                <column id="age"/>
                 <column id="job"/>
             </columns>
             <rowsCount/>

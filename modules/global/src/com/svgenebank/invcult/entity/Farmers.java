@@ -27,6 +27,9 @@ public class Farmers extends StandardEntity {
     @Column(name = "JOB")
     private String job;
 
+    @Column(name = "AGE")
+    private Integer age;
+
     public String getJob() {
         return job;
     }
@@ -49,5 +52,13 @@ public class Farmers extends StandardEntity {
 
     public void setIdTippersoana(Tippersoana idTippersoana) {
         this.idTippersoana = idTippersoana;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
     }
 }

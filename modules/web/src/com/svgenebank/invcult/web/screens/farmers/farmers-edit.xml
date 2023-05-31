@@ -30,6 +30,7 @@
                     </actions>
                 </lookupPickerField>
                 <textField id="denumireField" property="denumire"/>
+                <textField id="ageField" property="age"/>
                 <textField id="jobField" property="job"/>
             </column>
         </form>
