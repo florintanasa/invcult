@@ -92,6 +92,7 @@ create table INVCULT_FARMERS (
     DENUMIRE varchar(255) not null,
     JOB varchar(255),
     AGE integer,
+    REP varchar(255),
     --
     primary key (ID)
 )^
