@@ -62,7 +62,7 @@
                                              align="MIDDLE_RIGHT"
                                              nullOptionVisible="false"
                                              stylename="c-login-locales-select borderless"
-                                             textInputAllowed="false"/>
+                                             textInputAllowed="false" width="150px"/>
                             </hbox>
                             <button id="loginButton"
                                     action="submit"
@@ -88,7 +88,7 @@
             <image id="backgroundImage"
                    scaleMode="COVER"
                    stylename="c-login-background">
-                <relativePath path="VAADIN/brand-login-screen/background.svg"/>
+                <relativePath path="VAADIN/brand-login-screen/BRGVSV.svg"/>
             </image>
         </cssLayout>
     </layout>

@@ -23,7 +23,11 @@ public class AppLoginScreen extends LoginScreen {
     @Subscribe
     public void onAppLoginScreenInit(InitEvent event) {
         loadStyles();
-
+        poweredByLink.setStyleName("");
+        poweredByLink.setDescription("Banca de Resurse Genetice Vegetale \"Mihai Cristea\" Suceava");
+        poweredByLink.setValue("<p>&nbsp;&nbsp;Created by: <b>Florin Tanasă</b> " +
+                "for <a href=https://svgenebank.ro><b>Genebank</b></a></p>");
+        poweredByLink.setHtmlEnabled(true);
         initBottomPanel();
     }
 
