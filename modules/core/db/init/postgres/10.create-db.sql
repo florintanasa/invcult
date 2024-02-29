@@ -190,6 +190,8 @@ create table INVCULT_INVENTORY (
     DATE_ date not null,
     ID_PERSONS_ID uuid not null,
     NRINV varchar(50) not null,
+    COLLNUMB varchar(10),
+    ACCENUMB varchar(10),
     ID_LOCINV_ID uuid not null,
     LATITUDE double precision,
     LONGITUDE double precision,

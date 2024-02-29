@@ -39,6 +39,8 @@
                 <column id="date"/>
                 <column id="idPersons"/>
                 <column id="nrinv"/>
+                <column id="collnumb"/>
+                <column id="accenumb"/>
                 <column id="idLocinv"/>
                 <column id="idFarmers"/>
                 <column id="idLocferma.idLocalirysiruta"/>

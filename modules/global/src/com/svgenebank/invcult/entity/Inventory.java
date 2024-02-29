@@ -4,11 +4,7 @@ import com.haulmont.chile.core.annotations.Composition;
 import com.haulmont.chile.core.annotations.MetaProperty;
 import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
-import com.haulmont.cuba.core.entity.annotation.Listeners;
-import com.haulmont.cuba.core.entity.annotation.Lookup;
-import com.haulmont.cuba.core.entity.annotation.LookupType;
-import com.haulmont.cuba.core.entity.annotation.OnDelete;
-import com.haulmont.cuba.core.entity.annotation.PublishEntityChangedEvents;
+import com.haulmont.cuba.core.entity.annotation.*;
 import com.haulmont.cuba.core.global.DeletePolicy;
 
 import javax.persistence.*;
@@ -38,24 +34,30 @@ public class Inventory extends StandardEntity {
     @Column(name = "NRINV", nullable = false, unique = true, length = 50)
     private String nrinv;
 
+    @Column(name = "COLLNUMB", unique = true, length = 10)
+    private String collnumb;
+
+    @Column(name = "ACCENUMB", unique = true, length = 10)
+    private String accenumb;
+
     @Lookup(type = LookupType.DROPDOWN, actions = {"lookup", "open", "clear"})
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "ID_LOCINV_ID")
     @NotNull
     private Localitysiruta idLocinv;
 
- //   @Column(name = "LATITUDINE", length = 50)
- //   private String latitudine;
+    //   @Column(name = "LATITUDINE", length = 50)
+    //   private String latitudine;
 
     @Column(name = "LATITUDE")
-    @MetaProperty(datatype = GeoCoordinateDatatype.NAME)
+    @MetaProperty(datatype = "geocoordinate")
     private Double latitude;
 
 //    @Column(name = "LONGITUDINE", length = 50)
 //    private String longitudine;
 
     @Column(name = "LONGITUDE")
-    @MetaProperty(datatype = GeoCoordinateDatatype.NAME)
+    @MetaProperty(datatype = "geocoordinate")
     private Double longitude;
 
     @Column(name = "ALTTITUDINE")
@@ -168,6 +170,22 @@ public class Inventory extends StandardEntity {
     @Lob
     @Column(name = "REMARKS")
     private String remarks;
+
+    public String getAccenumb() {
+        return accenumb;
+    }
+
+    public void setAccenumb(String accenumb) {
+        this.accenumb = accenumb;
+    }
+
+    public String getCollnumb() {
+        return collnumb;
+    }
+
+    public void setCollnumb(String collnumb) {
+        this.collnumb = collnumb;
+    }
 
     public Set<Workdivision> getIdWorkdivision() {
         return idWorkdivision;

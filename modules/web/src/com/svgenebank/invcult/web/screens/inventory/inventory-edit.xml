@@ -120,6 +120,8 @@
                         </actions>
                     </lookupPickerField>
                     <textField id="nrinvField" property="nrinv" editable="false"/>
+                    <textField id="collnumbField" property="collnumb"/>
+                    <textField id="accenumbField" property="accenumb"/>
                     <lookupPickerField id="idLocinvField" optionsContainer="idLocinvsDc" property="idLocinv">
                         <actions>
                             <action id="lookup" type="picker_lookup"/>
