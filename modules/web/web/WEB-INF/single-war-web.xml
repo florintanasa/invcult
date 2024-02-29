@@ -31,7 +31,7 @@
     <!--Application components-->
     <context-param>
         <param-name>appComponents</param-name>
-        <param-value>com.haulmont.cuba ro.infoexpert.cuba.translationro com.haulmont.addon.helium com.haulmont.reports</param-value>
+        <param-value>com.haulmont.cuba ro.infoexpert.cuba.translationro com.haulmont.reports com.haulmont.addon.helium</param-value>
     </context-param>
 
     <!-- Servlet context listeners that load the application blocks -->
